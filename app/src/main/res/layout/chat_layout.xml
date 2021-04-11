@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/chatbackground"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:padding="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chat_msg"
+                    android:layout_marginLeft="2dp"
+                    android:text="Salon name"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_5" />
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/email"-->
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:layout_marginTop="2dp"-->
+<!--                    android:text="john@gmai.com"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textColor="@color/black_5" />-->
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="end"-->
+<!--                android:gravity="end"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="20 min ago"-->
+<!--                    android:id="@+id/time"-->
+<!--                    android:layout_gravity="end"-->
+<!--                    android:gravity="end"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textColor="@color/black_5"-->
+<!--                    android:padding="10dp" />-->
+<!--                -->
+
+<!--            </LinearLayout>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".patientactivities.PatientHomeTwoActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.one.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="Reason to have PCOS / PCOD"
+            app:titleTextColor="@color/white"
+            app:contentInsetStartWithNavigation="0dp"
+            app:popupTheme="@style/AppTheme.one.PopupOverlay"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_10" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/spacing_large"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="@dimen/spacing_large">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_60"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:text="First of all, you should know that in everyone’s life there is stress and tension. Without it there is no life. When any female has stress or tense and when her mind is working continue and when any female doesn’t share her problem with others it happens at that time because her mind is working continuously. Some female use to have nature that after sharing problems also mind work nonstop."
+                        android:justificationMode="inter_word"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:textColor="@color/grey_60"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:text="In each age group female use to have different kind of stress. For example, at student age, study related, while working – work related stress, after marriage many of female is having a different kind of issues and due to that having stress."
+                        android:justificationMode="inter_word"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:textColor="@color/grey_60"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:text="When any female loses near or dear one from her life and due to losing someone, getting shock, stress and tension. Other than above when the female is having sensitive and emotional nature and when someone has said something and mind start working and keep over thinking creating a problem for female."
+                        android:justificationMode="inter_word"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:textColor="@color/grey_60"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:text="Such different kind of stress, tension, sensitive, losing someone and emotional nature are affecting directly on hormones and which is misbalancing hormones"
+                        android:justificationMode="inter_word"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:textColor="@color/grey_60"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:text="If you have PCOS or PCOD. Just go back yourself and identify when all this thing happens and you will definitely identify by your self-having PCOS or PCOD."
+                        android:justificationMode="inter_word"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:textColor="@color/grey_60"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:text="Which means doing such kind or stress, tension, having sensitive or emotional nature made your hormones disturbed and finally you have got PCOS or PCOD. Please understand doing all this thing, nothing is solved but got problem of PCOS or PCOD"
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

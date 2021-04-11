@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">PCOSPCOD</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="player_error">Error initializing YouTube player: %s</string>
+
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="shop_name">Shop Name</string>
+    <string name="state">State</string>
+    <string name="district">District</string>
+    <string name="city_village">City Area / Village Name</string>
+    <string name="pincode">Pincode</string>
+    <string name="street">Address</string>
+    <string name="adhar">Aadhar Number*</string>
+    <string name="submit">SUBMIT</string>
+
+</resources>

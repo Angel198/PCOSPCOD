@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="60dp"
+    tools:context=".fragment.ChooseDoctorFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/Framelayout" />
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:clipToPadding="false"-->
+<!--        android:scrollbars="none"-->
+<!--        android:layout_marginBottom="80dp"-->
+<!--        android:id="@+id/nested"-->
+<!--        android:scrollingCache="true"-->
+<!--        app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:background="@color/purple_500"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/user_height"
+                    android:padding="15dp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/white"
+                    android:text="Please Choose Doctor Near to you" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <GridView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/gridview"
+                    android:numColumns="3"
+                    android:layout_marginBottom="50dp"/>
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:id="@+id/l_one"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <com.mikhaellopez.circularimageview.CircularImageView-->
+<!--                            android:layout_width="50dp"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:src="@drawable/image_one"-->
+<!--                            app:civ_border="true"-->
+<!--                            app:civ_border_color="@color/grey_10"-->
+<!--                            app:civ_border_width="2dp"-->
+<!--                            app:civ_shadow="true"-->
+<!--                            android:id="@+id/one"-->
+<!--                            app:civ_shadow_radius="0" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/spacing_medium"-->
+<!--                            android:text="Dr Rajesh Soni"-->
+<!--                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"-->
+<!--                            android:textColor="@color/grey_90"-->
+<!--                            app:fontFamily="sans-serif-medium" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Founder"-->
+<!--                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"-->
+<!--                            android:textColor="@color/grey_60"-->
+<!--                            app:fontFamily="sans-serif-light" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:id="@+id/l_two"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <com.mikhaellopez.circularimageview.CircularImageView-->
+<!--                            android:layout_width="50dp"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:src="@drawable/image_two"-->
+<!--                            app:civ_border="true"-->
+<!--                            app:civ_border_color="@color/grey_10"-->
+<!--                            app:civ_border_width="2dp"-->
+<!--                            app:civ_shadow="true"-->
+<!--                            android:id="@+id/two"-->
+<!--                            app:civ_shadow_radius="0" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/spacing_medium"-->
+<!--                            android:text="Geetu Rajesh Soni"-->
+<!--                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"-->
+<!--                            android:textColor="@color/grey_90"-->
+<!--                            app:fontFamily="sans-serif-medium" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Director/Partner"-->
+<!--                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"-->
+<!--                            android:textColor="@color/grey_60"-->
+<!--                            app:fontFamily="sans-serif-light" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:id="@+id/l_three"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <com.mikhaellopez.circularimageview.CircularImageView-->
+<!--                            android:layout_width="50dp"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:src="@drawable/image_three"-->
+<!--                            app:civ_border="true"-->
+<!--                            android:id="@+id/three"-->
+<!--                            app:civ_border_color="@color/grey_10"-->
+<!--                            app:civ_border_width="2dp"-->
+<!--                            app:civ_shadow="true"-->
+<!--                            app:civ_shadow_radius="0" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/spacing_medium"-->
+<!--                            android:text="Dr. Dilip Gadhavi"-->
+<!--                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"-->
+<!--                            android:textColor="@color/grey_90"-->
+<!--                            app:fontFamily="sans-serif-medium" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Gynaecologist"-->
+<!--                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"-->
+<!--                            android:textColor="@color/grey_60"-->
+<!--                            app:fontFamily="sans-serif-light" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+    <TextView
+        android:id="@+id/bt_submit"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:padding="10dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:background="@drawable/btn_rect_primary"
+        android:text="NEXT"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

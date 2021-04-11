@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".patientactivities.PatientHomeTenActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.one.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="Self Analysis"
+            app:titleTextColor="@color/white"
+            app:contentInsetStartWithNavigation="0dp"
+            app:popupTheme="@style/AppTheme.one.PopupOverlay"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_10" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_60"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Do you want to know you have PCOD or PCOD?" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_60"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="Enter Value" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_60"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="LH" />
+
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:textColor="@color/grey_60"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    style="@style/EditText.White"
+                    android:id="@+id/value_LH"
+                    android:textStyle="bold"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/add_border"
+                    android:layout_marginLeft="15dp"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_60"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="FSH" />
+
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:textColor="@color/grey_60"
+                    android:textSize="16sp"
+                    android:id="@+id/value_FSH"
+                    android:layout_marginTop="5dp"
+                    style="@style/EditText.White"
+                    android:textStyle="bold"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/add_border"
+                    android:layout_marginLeft="15dp"
+                    android:text="" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                style="@style/EditText.White"
+                android:id="@+id/bt_show"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal"
+                android:text="SHOW" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_60"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="Do you have AMH (Anti Mullerian Hormones) Report?" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_60"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="LH" />
+
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:textColor="@color/grey_60"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    style="@style/EditText.White"
+                    android:id="@+id/value_AMH"
+                    android:textStyle="bold"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/add_border"
+                    android:layout_marginLeft="15dp"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_60"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:text="If you have taken any kind of medicines in last 2 years like Allopathic, Ayurvedic or Homeopathy" />
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/radio_group1">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes_AMH"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:checked="false"
+                    android:textColor="@color/grey_60"
+                    android:text="Yes"/>
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no_AMH"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:checked="false"
+                    android:textColor="@color/grey_60"
+                    android:text="No"/>
+
+            </RadioGroup>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                style="@style/EditText.White"
+                android:id="@+id/bt_show_AMH"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal"
+                android:text="SHOW" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_60"
+                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"
+                    android:text="Having PCOS or PCOD"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_60"
+                    android:textSize="16sp"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"
+                    android:justificationMode="inter_word"
+                    android:text="If you have high AMH means your Hormones are imbalance, having more eggs and due to unhealthy eggs, if you are married unable to conceive. You AMH level should be less than 6.79 ng/ml and your hormones are imbalanced."/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_60"
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"
+                    android:text="If you have Low AMH level means you have low ovarian reserved, not having enough eggs and unable to conceive as well as your hormones are imbalanced."/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="40dp"
+    tools:context=".fragment.ConditionFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="12sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_60"
+                        android:textSize="17sp"
+                        android:padding="2dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp"
+                        android:text="PCOS PCOD Clinic is balancing AMH (Anti Mullerian Hormones). As we have kept main marker for PCOS and PCOD is AMH."
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_60"
+                        android:padding="2dp"
+                        android:textStyle="bold"
+                        android:text="All patients have to follow as below."
+                        android:textSize="17sp"
+                        android:layout_marginLeft="10dp"
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/check"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_60"
+                        android:padding="2dp"
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="10dp"
+                        android:text="No cream, lotion, deodorant, perfume or powder on the day of treatment."
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/check"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/grey_60"
+                        android:padding="2dp"
+                        android:text="No Alcohol prior to 48 hours of treatment."
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/check"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_60"
+                        android:padding="2dp"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Need to drink 3-to-4-liter water every day."
+                        android:textStyle="bold"
+                        android:layout_marginTop="2dp"
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/check"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/grey_60"
+                        android:textSize="17sp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Any kind medicines related to hormones are not allowed during treatment, until and otherwise suggested along with treatment."
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/check"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/grey_60"
+                        android:padding="2dp"
+                        android:text="Patient has to perform treatment every 3rd day if doing treatment at home. If in Clinic twice a week. If failure to do treatment due to any circumstances PCOS PCOD Clinic will not be responsible for result."
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/check"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/grey_60"
+                        android:padding="2dp"
+                        android:text="Patient has to do necessary test after 16 treatment if treatment doing at home and after 12 treatment if patient is doing treatment at home."
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/check"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/grey_60"
+                        android:padding="2dp"
+                        android:text="PCOS PCOD Clinic may inform you to do any additional lab test, when required and patient need to do it without any kind of excuses."
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/check"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/grey_60"
+                        android:padding="2dp"
+                        android:text="PCOS PCOD Clinic is not providing any medicines only for Hormones."
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/check"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/grey_60"
+                        android:padding="2dp"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:text="If patient is having Insulin resistance, Endometrial thickness problem, Fibroids, Thyroid, Cholesterol, Vitamin D in such cases PCOS PCOD Clinic will suggest necessary medicines which will not have any kind of side effects and patient is not allowed to use any medicines by them self."
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/check"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/grey_60"
+                        android:padding="2dp"
+                        android:textStyle="bold"
+                        android:text="Patient need to pay additional charge for Insulin resistance, Thyroids, Fibroids, Vitamin D, Cholesterol, Endometrial thickness, Vitamin D    ."
+                        android:textSize="17sp"
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/check"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/grey_60"
+                        android:padding="2dp"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:text="If patient will unable to pay fees on time, PCOS PCOD Clinic will stop treatment."
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/check"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/grey_60"
+                        android:padding="2dp"
+                        android:text="PCOS PCOD Clinic conIf any patient has taken any kind of medicines in 18 months before doing AMH test in that case sider AMH value multiply by two from report value and after 12 and 16 treatment PCOS PCOD Clinic do not do same."
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/check"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/grey_60"
+                        android:padding="2dp"
+                        android:text="PCOS PCOD Clinic is bound to bring AMH level in normal level and our expert will inform your AMH level while joining for treatment."
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--            </androidx.cardview.widget.CardView>-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

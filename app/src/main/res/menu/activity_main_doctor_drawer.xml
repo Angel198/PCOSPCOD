@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+        <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/baseline_home_24"
+                    android:title="Home" />
+
+        </group>
+
+        <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_about"
+                    android:icon="@drawable/ic_content_copy_black_24dp"
+                    android:title="About US" />
+
+        </group>
+
+        <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_testimonial"
+                    android:icon="@drawable/report"
+                    android:title="Testimonial" />
+
+        </group>
+
+
+        <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_chat"
+                    android:icon="@drawable/chat"
+                    android:title="Chat" />
+
+
+        </group>
+
+        <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_notification"
+                    android:icon="@drawable/baseline_notifications_24"
+                    android:title="Notification" />
+
+        </group>
+
+
+
+        <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_contact"
+                    android:icon="@drawable/baseline_contacts_24"
+                    android:title="Contact US" />
+
+        </group>
+
+
+<!--        <group android:checkableBehavior="single">-->
+<!--                <item-->
+<!--                    android:id="@+id/nav_logout"-->
+<!--                    android:icon="@drawable/logout"-->
+<!--                    android:title="Logout" />-->
+
+<!--        </group>-->
+
+
+</menu>
