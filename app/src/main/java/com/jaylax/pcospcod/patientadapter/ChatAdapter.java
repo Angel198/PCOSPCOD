@@ -21,8 +21,10 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final int VIEW_TYPE_ME = 1;
     private static final int VIEW_TYPE_OTHER = 2;
     List<ChatModel> mChats;
+    String userId;
 
-    public ChatAdapter(List<ChatModel> mChats) {
+    public ChatAdapter(String userId,List<ChatModel> mChats) {
+        this.userId= userId;
         this.mChats = mChats;
     }
 
@@ -45,8 +47,7 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        if (TextUtils.equals(mChats.get(position).senderUid,
-                FirebaseAuth.getInstance().getCurrentUser().getUid())) {
+        if (TextUtils.equals(mChats.get(position).sender,userId)) {
             configureMyChatViewHolder((MyChatViewHolder) holder, position);
         } else {
             configureOtherChatViewHolder((OtherChatViewHolder) holder, position);
@@ -57,30 +58,28 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private void configureMyChatViewHolder(final MyChatViewHolder myChatViewHolder, int position) {
         ChatModel chat = mChats.get(position);
         SimpleDateFormat sfd = new SimpleDateFormat("hh:mm a");
-        String date=sfd.format(new Date(chat.timestamp).getTime());
-        myChatViewHolder.senderMsgTime.setText(date);
-
-
+//        String date=sfd.format(new Date(chat.timestamp).getTime());
+//        myChatViewHolder.senderMsgTime.setText(date);
+        myChatViewHolder.txtChatMessage.setText(chat.message);
     }
 
     private void configureOtherChatViewHolder(final OtherChatViewHolder otherChatViewHolder, int position) {
         final ChatModel chat = mChats.get(position);
         SimpleDateFormat sfd = new SimpleDateFormat("hh:mm a");
-        String date=sfd.format(new Date(chat.timestamp).getTime());
-        otherChatViewHolder.receiverMsgTime.setText(date);
-
+//        String date=sfd.format(new Date(chat.timestamp).getTime());
+//        otherChatViewHolder.receiverMsgTime.setText(date);
+        otherChatViewHolder.txtChatMessage.setText(chat.message);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mChats.size();
     }
 
 
     @Override
     public int getItemViewType(int position) {
-        if (TextUtils.equals(mChats.get(position).senderUid,
-                FirebaseAuth.getInstance().getCurrentUser().getUid())) {
+        if (TextUtils.equals(mChats.get(position).sender,userId)) {
             return VIEW_TYPE_ME;
         } else {
             return VIEW_TYPE_OTHER;

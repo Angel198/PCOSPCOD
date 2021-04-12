@@ -18,7 +18,7 @@
         android:layout_height="wrap_content">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_chat_detail"
+            android:id="@+id/rv_chat_detail_patient"
             android:layout_width="match_parent"
             android:layout_marginBottom="80dp"
             android:layout_height="match_parent"/>
@@ -67,7 +67,7 @@
                     android:background="@drawable/attach"/>
 
                 <EditText
-                    android:id="@+id/edittxt_chat_Message"
+                    android:id="@+id/edittxt_chat_Message_Patient"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -79,7 +79,7 @@
 
                 <ImageButton
                     android:layout_gravity="center"
-                    android:id="@+id/btnSend"
+                    android:id="@+id/btnSendPatient"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_alignParentRight="true"

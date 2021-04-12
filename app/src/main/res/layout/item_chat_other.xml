@@ -6,10 +6,10 @@
     android:background="?android:attr/selectableItemBackground"
     android:clickable="true"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/padding_small"
-    android:paddingEnd="@dimen/padding_avg"
     android:paddingStart="@dimen/padding_avg"
-    android:paddingTop="@dimen/padding_small">
+    android:paddingTop="@dimen/padding_small"
+    android:paddingEnd="@dimen/padding_avg"
+    android:paddingBottom="@dimen/padding_small">
 
     <TextView
         android:id="@+id/text_view_user_alphabet"
@@ -24,32 +24,33 @@
         android:textStyle="bold"
         tools:text="a" />
 
-    <View
-        android:layout_width="@dimen/space_avg"
-        android:layout_height="wrap_content"
-        android:id="@+id/space"
-        android:layout_toRightOf="@+id/text_view_user_alphabet"/>
-
     <TextView
-        android:layout_toRightOf="@+id/space"
         android:id="@+id/text_view_chat_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin_huge"
+        android:layout_marginRight="@dimen/margin_huge"
+        android:layout_toRightOf="@+id/space"
         android:background="@drawable/chat_rounded_rect_bg"
-        android:padding="5dp"
+        android:padding="10dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/grey_100"
-        tools:text="Hello mate ! \ntest"
-        android:layout_marginRight="@dimen/margin_huge" />
+        android:textColor="@color/black"
+        tools:text="Hello mate ! \ntest" />
 
     <TextView
-        android:layout_below="@+id/text_view_chat_message"
+        android:id="@+id/receiverMsgTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/text_view_chat_message"
+        android:layout_gravity="right"
         android:text="Medium Text"
-        android:id="@+id/receiverMsgTime"
-        android:layout_gravity="right" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/space"
+        android:layout_width="@dimen/space_avg"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/text_view_user_alphabet" />
 </RelativeLayout>

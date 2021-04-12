@@ -7,31 +7,33 @@
     android:clickable="true"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/padding_small"
-    android:paddingEnd="@dimen/padding_avg"
     android:paddingStart="@dimen/padding_avg"
-    android:paddingTop="@dimen/padding_small">
+    android:paddingTop="@dimen/padding_small"
+    android:paddingEnd="@dimen/padding_avg"
+    android:paddingBottom="@dimen/padding_small">
 
     <TextView
         android:id="@+id/text_view_chat_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_huge"
+        android:layout_marginLeft="@dimen/margin_huge"
         android:layout_toStartOf="@+id/text_view_user_alphabet"
+        android:layout_toLeftOf="@+id/text_view_user_alphabet"
         android:background="@drawable/chat_rounded_rect_bg"
         android:padding="10dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/grey_100"
-        tools:text="Noice man !"
-        android:layout_marginLeft="@dimen/margin_huge"
-        android:layout_toLeftOf="@+id/text_view_user_alphabet" />
+        android:textColor="@color/black"
+        tools:text="Noice man !" />
 
     <TextView
         android:id="@+id/text_view_user_alphabet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginStart="@dimen/margin_avg"
+        android:layout_marginLeft="@dimen/margin_avg"
         android:background="@drawable/circle_accent"
         android:gravity="center"
         android:maxEms="1"
@@ -39,19 +41,18 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/grey_100"
         android:textStyle="bold"
-        tools:text="a"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="@dimen/margin_avg" />
+        tools:text="a" />
 
 
     <TextView
-        android:layout_below="@+id/text_view_chat_message"
+        android:id="@+id/senderMsgTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_chat_message"
         android:layout_alignParentRight="true"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_gravity="right"
         android:text="Medium Text"
-        android:id="@+id/senderMsgTime"
-        android:layout_gravity="right" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="gone" />
 
 </RelativeLayout>

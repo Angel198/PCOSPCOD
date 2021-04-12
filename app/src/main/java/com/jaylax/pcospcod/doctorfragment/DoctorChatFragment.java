@@ -63,6 +63,7 @@ public class DoctorChatFragment extends Fragment {
         RecyclerView.LayoutManager manager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(manager);
 
+        getdata();
 
         return view;
     }
