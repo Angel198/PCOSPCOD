@@ -111,4 +111,5 @@ public class DoctorChatActivity extends AppCompatActivity {
         send_msg.setText("");
 
     }
+
 }

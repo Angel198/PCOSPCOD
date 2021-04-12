@@ -13,8 +13,7 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:scrollbars="none"
-        android:layout_marginTop="58dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginTop="50dp"
         android:background="@color/grey_5"
         android:scrollingCache="true"
         android:padding="15dp"
@@ -23,6 +22,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
             android:orientation="vertical">
 
             <FrameLayout
@@ -473,28 +473,29 @@
                         android:text="Female"/>
 
                 </RadioGroup>
+
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/bt_submit"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:padding="10dp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/btn_rect_primary"
+                android:text="SUBMIT"
+                android:layout_marginBottom="8dp"
+                android:textAllCaps="false"
+                android:layout_alignParentBottom="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@android:color/white" />
 
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 
-    <TextView
-        android:id="@+id/bt_submit"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:padding="10dp"
-        android:layout_gravity="center|bottom"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="@dimen/spacing_large"
-        android:background="@drawable/btn_rect_primary"
-        android:text="SUBMIT"
-        android:layout_marginBottom="8dp"
-        android:textAllCaps="false"
-        android:layout_alignParentBottom="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        android:textColor="@android:color/white" />
 
 </LinearLayout>

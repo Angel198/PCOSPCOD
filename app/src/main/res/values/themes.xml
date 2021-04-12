@@ -48,8 +48,7 @@
     </style>
 
 
-
-    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="BaseTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryDark">@color/purple_700</item>
@@ -59,7 +58,7 @@
         <item name="android:dialogTheme">@style/Dialog.Theme</item>
     </style>
 
-    <style name="BaseTheme.one" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="BaseTheme.one" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#014446</item>
         <item name="colorPrimaryDark">#014446</item>
@@ -74,7 +73,6 @@
 
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="AppTheme.Dialog.NoActionBar" parent="Theme.AppCompat.Light.Dialog">
