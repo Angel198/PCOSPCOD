@@ -1,8 +1,5 @@
 package com.jaylax.pcospcod.patientactivities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -29,8 +26,6 @@ import com.jaylax.pcospcod.VideoCalling.BaseActivity;
 import com.jaylax.pcospcod.VideoCalling.CallScreenActivity;
 import com.jaylax.pcospcod.VideoCalling.SinchService;
 import com.jaylax.pcospcod.doctoractivities.DoctorProfileActivity;
-import com.jaylax.pcospcod.doctoractivities.DoctorVideoCallActivity;
-import com.jaylax.pcospcod.doctoractivities.PatientDetailActivity;
 import com.jaylax.pcospcod.util.RequestHandler;
 import com.mikhaellopez.circularimageview.CircularImageView;
 import com.sinch.android.rtc.SinchError;
@@ -39,7 +34,10 @@ import com.sinch.android.rtc.calling.Call;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.HashMap;
+
+import androidx.appcompat.widget.Toolbar;
 
 
 public class MyDoctorActivity extends BaseActivity implements SinchService.StartFailedListener {
@@ -210,6 +208,11 @@ public class MyDoctorActivity extends BaseActivity implements SinchService.Start
                         String g = c.getString("mobile_number");
                         String h = c.getString("description");
                         String j = c.getString("profile_image_url");
+
+
+                        editor.putString("doctor_id",doc_id);
+                        editor.apply();
+                        editor.commit();
 
                         byte[] decodestring = Base64.decode(j,Base64.DEFAULT);
                         Bitmap decodeByte = BitmapFactory.decodeByteArray(decodestring,0,decodestring.length);

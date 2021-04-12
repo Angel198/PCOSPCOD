@@ -146,9 +146,9 @@ public class LoginActivity extends AppCompatActivity {
                             String user = jj.getString("token");
                             String nn = jj.getString("name");
                             String user_id = jj.getString("userid");
+                            String ss= jj.getString("device_token");
 
                             Log.i("r_name",nn);
-
 
                             databaseReference = FirebaseDatabase.getInstance().getReference().child(newToken);
 
@@ -171,6 +171,7 @@ public class LoginActivity extends AppCompatActivity {
                             editor.putString("userid", user_id);
                             editor.putString("token",user);
                             editor.putString("nn", nn);
+                            editor.putString("device_token_fcm",ss);
                             editor.putBoolean("hasLogged", true);
                             editor.apply();
                             editor.commit();
