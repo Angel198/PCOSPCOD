@@ -28,5 +28,7 @@ public class DoctorChatActivity extends AppCompatActivity {
 
         patient_id = getIntent().getStringExtra("patient_ID");
 
+
     }
+
 }
