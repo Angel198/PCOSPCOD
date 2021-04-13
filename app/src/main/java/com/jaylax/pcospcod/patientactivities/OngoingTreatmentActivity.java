@@ -1,17 +1,8 @@
 package com.jaylax.pcospcod.patientactivities;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
-import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -34,19 +25,25 @@ import com.jaylax.pcospcod.Constants;
 import com.jaylax.pcospcod.LoginActivity;
 import com.jaylax.pcospcod.MyNotificationManager;
 import com.jaylax.pcospcod.R;
-import com.jaylax.pcospcod.AlarmReceiver;
 import com.jaylax.pcospcod.util.CalendarModelTreatment;
 import com.jaylax.pcospcod.util.RequestHandler;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import java.text.ParseException;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class OngoingTreatmentActivity extends AppCompatActivity {
 
@@ -94,7 +91,6 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(manager);
 
-        T_date = sharedPreferences.getString("t_date",null);
         S_date = sharedPreferences.getString("s_date",null);
 
         if (current_Date.equals(S_date))
@@ -115,37 +111,12 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
 
                             }
 
-                            MyNotificationManager.getInstance(getApplicationContext()).displayNotification("Greetings", "Hello how are you?");
+                            MyNotificationManager.getInstance(getApplicationContext()).displayNotification("PCOS PCOD", "You have your treatment today");
 
         }
         else {
             Log.i("dd","No");
         }
-
-        i_ring = getIntent().getStringExtra("ring");
-
-//        if (i_ring.equals("1"))
-//        {
-//            AlertDialog.Builder builder = new AlertDialog.Builder(OngoingTreatmentActivity.this);
-//            builder.setMessage("Did you complete your treatment?")
-//                    .setCancelable(false)
-//                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                        public void onClick(DialogInterface dialog, int id) {
-//
-//                        }
-//                    })
-//                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-//                        public void onClick(DialogInterface dialog, int id) {
-//                            dialog.cancel();
-//                        }
-//                    });
-//            AlertDialog alert = builder.create();
-//            alert.show();
-//
-//        }
-//        else {
-//            Log.i("No","No notification");
-//        }
 
         calender.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
@@ -158,24 +129,15 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
                 date = Date1;
                 Log.i("date",date);
 
-                editor.putString("t_date",date);
-                editor.apply();
-                editor.commit();
-
-                t_date.setText(date);
-                t_number.setText("1");
 
                 getdata();
-
-                if (!date.equals(""))
-                {
-                    T_date = sharedPreferences.getString("t_date",null);
-                    Log.i("T_date",T_date);
-                }
 
 
             }
         });
+
+
+        getdata1();
 
     }
 
@@ -194,7 +156,6 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
                 progressBar = new ProgressBar(getApplicationContext());
                 progressBar.setVisibility(View.VISIBLE);
 
-
             }
 
             @Override
@@ -212,17 +173,6 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
                     treatment_date = jj.getString("next_treatment_date");
                     treatment_status = jj.getString("status");
 
-//                    if (!date.equals(""))
-//                    {
-                        editor.putString("s_date",treatment_date);
-                        editor.apply();
-                        editor.commit();
-
-                        S_date = sharedPreferences.getString("s_date",null);
-                        Log.i("S_date",S_date);
-
-
-//                    }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -241,8 +191,72 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
                 params.put("patient_id", user_id);
                 params.put("treatment_date", date);
                 params.put("status", "Pending");
-//                params.put("remarks", "null");
                 return requestHandler.sendPostRequest("http://pcospcod.curepcos.in/api/patient_treatment", params);
+
+            }
+
+        }
+
+        UserLogin ul = new UserLogin();
+        ul.execute();
+
+    }
+
+
+    public void getdata1()
+    {
+        class UserLogin extends AsyncTask<Void, Void, String> {
+
+            ProgressBar progressBar;
+
+            @Override
+            protected void onPreExecute() {
+                Log.d("newwwss", "Login Function Called PreExecute");
+
+                super.onPreExecute();
+
+                progressBar = new ProgressBar(getApplicationContext());
+                progressBar.setVisibility(View.VISIBLE);
+
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+
+                super.onPostExecute(s);
+                progressBar.setVisibility(View.GONE);
+
+                try {
+
+                    Log.d("response", s);
+                    JSONObject obj = new JSONObject(s);
+                    JSONObject jj = obj.getJSONObject("data");
+
+                    treatment_date = jj.getString("next_treatment_date");
+                    treatment_status = jj.getString("status");
+
+
+                    t_date.setText(treatment_date);
+                    editor.putString("s_date",treatment_date);
+                    editor.apply();
+                    editor.commit();
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @SuppressLint("WrongThread")
+            @Override
+            protected String doInBackground(Void... voids) {
+                //Creating request handler object
+                RequestHandler requestHandler = new RequestHandler();
+
+                //Creating request parameters
+                HashMap<String, String> params = new HashMap<>();
+
+                params.put("patient_id", user_id);
+                return requestHandler.sendPostRequest("http://curepcos.in/hospitalmanagement/api/get_patient_treatment_list", params);
 
             }
 
@@ -254,46 +268,46 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
 
     }
 
-    public void data()
-    {
-        try {
-            for (int i = 2; i<= 16; i++)
-            {
-                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-                c.setTime(sdf.parse(date));
-                c.add(Calendar.DATE, 3);
-
-                Date resultdate = new Date(c.getTimeInMillis());
-
-                String dd = sdf.format(resultdate);
-
-                Log.i("date",dd);
-
-                sdf = new SimpleDateFormat("EEEE");
-
-                String day = sdf.format(resultdate);
-
-                Log.i("day",day);
-
-
-                CalendarModelTreatment calendarModelTreatment = new CalendarModelTreatment(dd,day,i);
-                calendarModelTreatments.add(calendarModelTreatment);
-
-                date = dd;
-
-            }
-
-            recyclerAdapter = new RecyclerAdapter(calendarModelTreatments,OngoingTreatmentActivity.this);
-            recyclerView.setAdapter(recyclerAdapter);
-
-        }
-        catch (ParseException e) {
-
-            e.printStackTrace();
-
-        }
-
-    }
+//    public void data()
+//    {
+//        try {
+//            for (int i = 2; i<= 16; i++)
+//            {
+//                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+//                c.setTime(sdf.parse(date));
+//                c.add(Calendar.DATE, 3);
+//
+//                Date resultdate = new Date(c.getTimeInMillis());
+//
+//                String dd = sdf.format(resultdate);
+//
+//                Log.i("date",dd);
+//
+//                sdf = new SimpleDateFormat("EEEE");
+//
+//                String day = sdf.format(resultdate);
+//
+//                Log.i("day",day);
+//
+//
+//                CalendarModelTreatment calendarModelTreatment = new CalendarModelTreatment(dd,day,i);
+//                calendarModelTreatments.add(calendarModelTreatment);
+//
+//                date = dd;
+//
+//            }
+//
+//            recyclerAdapter = new RecyclerAdapter(calendarModelTreatments,OngoingTreatmentActivity.this);
+//            recyclerView.setAdapter(recyclerAdapter);
+//
+//        }
+//        catch (ParseException e) {
+//
+//            e.printStackTrace();
+//
+//        }
+//
+//    }
 
     private void initToolbar() {
 
@@ -393,9 +407,12 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
         }
 
     }
+
     public void refresh(View view){          //refresh is onClick name given to the button
         onRestart();
     }
+
+
     @Override
     protected void onRestart() {
 

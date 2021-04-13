@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -17,14 +16,12 @@ import com.jaylax.pcospcod.DoctorLoginActivity;
 import com.jaylax.pcospcod.R;
 import com.jaylax.pcospcod.patientadapter.ChatAdapter;
 import com.jaylax.pcospcod.util.ChatModel;
-
+import java.util.ArrayList;
+import java.util.HashMap;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class DoctorChatActivity extends AppCompatActivity {
 
@@ -71,7 +68,9 @@ public class DoctorChatActivity extends AppCompatActivity {
                     sendMessage(send_msg.getText().toString().trim());
                 }
             }
+
         });
+
     }
 
     private void readMessage() {
@@ -91,14 +90,18 @@ public class DoctorChatActivity extends AppCompatActivity {
 
                 chatAdapter = new ChatAdapter(user_id,chatList);
                 recyclerViewChat.setAdapter(chatAdapter);
+
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
+
         });
+
     }
+
 
     private void sendMessage(String message) {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();

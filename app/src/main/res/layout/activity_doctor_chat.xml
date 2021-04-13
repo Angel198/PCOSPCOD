@@ -81,14 +81,14 @@
                 android:background="@drawable/thin_border"
                 android:visibility="visible">
 
-                <ImageView
-                    android:id="@+id/img_attach"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/teal_300"
-                    android:background="@drawable/attach"/>
+<!--                <ImageView-->
+<!--                    android:id="@+id/img_attach"-->
+<!--                    android:layout_width="20dp"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:backgroundTint="@color/teal_300"-->
+<!--                    android:background="@drawable/attach"/>-->
 
                 <EditText
                     android:id="@+id/edittxt_chat_Message"
