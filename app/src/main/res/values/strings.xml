@@ -28,5 +28,8 @@
     <string name="street">Address</string>
     <string name="adhar">Aadhar Number*</string>
     <string name="submit">SUBMIT</string>
+    <string name="treatment_alert_msg">Are you going to do your treatment today?</string>
+    <string name="txt_yes">Yes</string>
+    <string name="txt_no">No</string>
 
 </resources>

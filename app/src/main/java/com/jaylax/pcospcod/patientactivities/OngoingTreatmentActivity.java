@@ -61,6 +61,8 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
     Calendar calendar;
     String i_ring = "null";
 
+    Boolean isFromNotification = false;
+
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +71,10 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
 
         initToolbar();
 
+        if (getIntent().hasExtra("fromNotification")) {
+            isFromNotification = getIntent().getBooleanExtra("fromNotification", false);
+        }
+
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         calender = (CalendarView) findViewById(R.id.calendar_view);
         t_date = (TextView) findViewById(R.id.date);
@@ -76,58 +82,78 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
         t_number = (TextView) findViewById(R.id.treatment_number);
 
         sharedPreferences = getSharedPreferences(LoginActivity.MyPREFERENCES, Context.MODE_PRIVATE);
-        user_id = sharedPreferences.getString("userid",null);
-        name = sharedPreferences.getString("nn",null);
+        user_id = sharedPreferences.getString("userid", null);
+        name = sharedPreferences.getString("nn", null);
         editor = sharedPreferences.edit();
 
-        Log.i("user_id",user_id);
+        Log.i("user_id", user_id);
 
         calendar = Calendar.getInstance();
-        SimpleDateFormat mdformat = new SimpleDateFormat("yyyy-MM-dd ");
-        current_Date =  mdformat.format(calendar.getTime());
+        SimpleDateFormat mdformat = new SimpleDateFormat("yyyy-MM-dd");
+        current_Date = mdformat.format(calendar.getTime());
 
-        Log.i("current_Date",current_Date);
+        Log.i("current_Date", current_Date);
 
-        RecyclerView.LayoutManager manager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false);
+        RecyclerView.LayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(manager);
 
-        S_date = sharedPreferences.getString("s_date",null);
+        S_date = sharedPreferences.getString("s_date", null);
 
-        if (current_Date.equals(S_date))
-        {
+        if (isFromNotification) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(R.string.app_name);
+            builder.setMessage(R.string.treatment_alert_msg);
+            builder.setCancelable(false);
+            builder.setPositiveButton(R.string.txt_yes, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    //TODO : Call API on Yes click
+                }
+            });
 
-                            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                                NotificationManager mNotificationManager =
-                                        (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-                                int importance = NotificationManager.IMPORTANCE_HIGH;
-                                NotificationChannel mChannel = new NotificationChannel(Constants.CHANNEL_ID, Constants.CHANNEL_NAME, importance);
-                                mChannel.setDescription(Constants.CHANNEL_DESCRIPTION);
-                                mChannel.enableLights(true);
-                                mChannel.setLightColor(Color.RED);
-                                mChannel.enableVibration(true);
-                                mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
-
-                                mNotificationManager.createNotificationChannel(mChannel);
-
-                            }
-
-                            MyNotificationManager.getInstance(getApplicationContext()).displayNotification("PCOS PCOD", "You have your treatment today");
-
+            builder.setNegativeButton(R.string.txt_no, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
+            dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.RED);
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.BLACK);
         }
-        else {
-            Log.i("dd","No");
+
+        if (current_Date.equals(S_date) && !isFromNotification) {
+
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                NotificationManager mNotificationManager =
+                        (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                int importance = NotificationManager.IMPORTANCE_HIGH;
+                NotificationChannel mChannel = new NotificationChannel(Constants.CHANNEL_ID, Constants.CHANNEL_NAME, importance);
+                mChannel.setDescription(Constants.CHANNEL_DESCRIPTION);
+                mChannel.enableLights(true);
+                mChannel.setLightColor(Color.RED);
+                mChannel.enableVibration(true);
+                mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+
+                mNotificationManager.createNotificationChannel(mChannel);
+
+            }
+
+            MyNotificationManager.getInstance(getApplicationContext()).displayNotification("PCOS PCOD", "You have your treatment today");
+
+        } else {
+            Log.i("dd", "No");
         }
 
         calender.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
-            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth)
-            {
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
 
                 calendarModelTreatments.clear();
 
                 String Date1 = year + "-" + (month + 1) + "-" + dayOfMonth;
                 date = Date1;
-                Log.i("date",date);
+                Log.i("date", date);
 
                 getdata();
 
@@ -139,8 +165,7 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
 
     }
 
-    public void getdata()
-    {
+    public void getdata() {
         class UserLogin extends AsyncTask<Void, Void, String> {
 
             ProgressBar progressBar;
@@ -201,8 +226,7 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
     }
 
 
-    public void getdata1()
-    {
+    public void getdata1() {
         class UserLogin extends AsyncTask<Void, Void, String> {
 
             ProgressBar progressBar;
@@ -235,7 +259,7 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
 
 
                     t_date.setText(treatment_date);
-                    editor.putString("s_date",treatment_date);
+                    editor.putString("s_date", treatment_date);
                     editor.apply();
                     editor.commit();
 
@@ -320,8 +344,7 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
 
         int id = item.getItemId();
 
-        if (id == android.R.id.home )
-        {
+        if (id == android.R.id.home) {
             finish();
         }
 
@@ -343,7 +366,7 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
         }
 
         public class MyViewHolder extends RecyclerView.ViewHolder {
-            TextView date, day , number;
+            TextView date, day, number;
             ImageView imageView;
 
             public MyViewHolder(View view) {
@@ -395,7 +418,7 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
         public void onBindViewHolder(final MyViewHolder holder, final int position) {
             holder.date.setText(mListenerList.get(position).getDate());
             holder.day.setText(mListenerList.get(position).getDay());
-            holder.number.setText(""+mListenerList.get(position).getNumber());
+            holder.number.setText("" + mListenerList.get(position).getNumber());
 
         }
 
@@ -406,7 +429,7 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
 
     }
 
-    public void refresh(View view){          //refresh is onClick name given to the button
+    public void refresh(View view) {          //refresh is onClick name given to the button
         onRestart();
     }
 

@@ -44,7 +44,7 @@ public class MyNotificationManager {
          * */
 
         Intent resultIntent = new Intent(mCtx, OngoingTreatmentActivity.class);
-
+        resultIntent.putExtra("fromNotification",true);
         /*
          *  Now we will create a pending intent
          *  The method getActivity is taking 4 parameters
