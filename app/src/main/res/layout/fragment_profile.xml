@@ -47,7 +47,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:layout_gravity="center"
-                            android:background="@drawable/ttt"
+                            android:background="@drawable/treatment_final"
                             android:gravity="center"
                             android:orientation="vertical">
 
@@ -96,7 +96,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:id="@+id/layout_two"
-                            android:background="@drawable/treatment"
+                            android:background="@drawable/treatment_final"
                             android:orientation="vertical">
 
                             <TextView
@@ -106,7 +106,7 @@
                                 android:layout_marginTop="80dp"
                                 android:gravity="center|bottom"
                                 android:text="Balance Treatment"
-                                android:textColor="#014446"
+                                android:textColor="@color/white"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
@@ -148,7 +148,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:id="@+id/layout_three"
-                            android:background="@drawable/report_background"
+                            android:background="@drawable/report_final"
                             android:orientation="vertical">
 
 
@@ -162,6 +162,7 @@
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
+
 
                         </LinearLayout>
 
@@ -192,7 +193,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:id="@+id/layout_four"
-                            android:background="@drawable/my_doc"
+                            android:background="@drawable/mydoctor_final"
                             android:orientation="vertical">
 
                             <TextView

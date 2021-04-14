@@ -28,6 +28,7 @@ import com.jaylax.pcospcod.R;
 import com.jaylax.pcospcod.util.CalendarModelTreatment;
 import com.jaylax.pcospcod.util.RequestHandler;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -108,6 +109,9 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     //TODO : Call API on Yes click
+
+
+                    getdata_completed(S_date);
                 }
             });
 
@@ -152,10 +156,32 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
                 calendarModelTreatments.clear();
 
                 String Date1 = year + "-" + (month + 1) + "-" + dayOfMonth;
-                date = Date1;
-                Log.i("date", date);
 
-                getdata();
+                AlertDialog.Builder builder = new AlertDialog.Builder(OngoingTreatmentActivity.this);
+                builder.setTitle(R.string.app_name);
+                builder.setMessage("Do you want to change your date ?");
+                builder.setCancelable(false);
+                builder.setPositiveButton(R.string.txt_yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //TODO : Call API on Yes click
+
+                        date = Date1;
+
+                        Log.i("date", date);
+
+                        getdata();
+                    }
+                });
+
+                builder.setNegativeButton(R.string.txt_no, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
 
             }
         });
@@ -193,8 +219,8 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
                     JSONObject obj = new JSONObject(s);
                     JSONObject jj = obj.getJSONObject("data");
 
-                    treatment_date = jj.getString("next_treatment_date");
-                    treatment_status = jj.getString("status");
+                    String treatment_date = jj.getString("next_treatment_date");
+                    String treatment_status = jj.getString("status");
 
 
                 } catch (JSONException e) {
@@ -252,11 +278,15 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
 
                     Log.d("response", s);
                     JSONObject obj = new JSONObject(s);
-                    JSONObject jj = obj.getJSONObject("data");
+                    JSONArray jsonArray = obj.getJSONArray("data");
 
-                    treatment_date = jj.getString("next_treatment_date");
-                    treatment_status = jj.getString("status");
+                    for(int i = 0; i < jsonArray.length(); ++i) {
 
+                        JSONObject c = jsonArray.getJSONObject(i);
+                        treatment_date = c.getString("treatment_date");
+                        treatment_status = c.getString("status");
+
+                    }
 
                     t_date.setText(treatment_date);
                     editor.putString("s_date", treatment_date);
@@ -353,6 +383,66 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
     }
 
 
+    public void getdata_completed(String dateee) {
+        class UserLogin extends AsyncTask<Void, Void, String> {
+
+            ProgressBar progressBar;
+
+            @Override
+            protected void onPreExecute() {
+                Log.d("newwwss", "Login Function Called PreExecute");
+
+                super.onPreExecute();
+
+                progressBar = new ProgressBar(getApplicationContext());
+                progressBar.setVisibility(View.VISIBLE);
+
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+
+                super.onPostExecute(s);
+                progressBar.setVisibility(View.GONE);
+
+                try {
+
+                    Log.d("response", s);
+                    JSONObject obj = new JSONObject(s);
+                    JSONObject jj = obj.getJSONObject("data");
+
+                    String treatment_date = jj.getString("next_treatment_date");
+                    String treatment_status = jj.getString("status");
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @SuppressLint("WrongThread")
+            @Override
+            protected String doInBackground(Void... voids) {
+                //Creating request handler object
+                RequestHandler requestHandler = new RequestHandler();
+
+                //Creating request parameters
+                HashMap<String, String> params = new HashMap<>();
+
+                params.put("patient_id", user_id);
+                params.put("treatment_date", dateee);
+                params.put("status", "Completed");
+                return requestHandler.sendPostRequest("http://pcospcod.curepcos.in/api/patient_treatment", params);
+
+            }
+
+        }
+
+        UserLogin ul = new UserLogin();
+        ul.execute();
+
+    }
+
     public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
 
         private List<CalendarModelTreatment> mListenerList;
@@ -428,6 +518,8 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
         }
 
     }
+
+
 
     public void refresh(View view) {          //refresh is onClick name given to the button
         onRestart();
