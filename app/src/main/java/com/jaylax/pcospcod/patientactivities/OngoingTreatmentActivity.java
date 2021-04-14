@@ -129,9 +129,7 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
                 date = Date1;
                 Log.i("date",date);
 
-
                 getdata();
-
 
             }
         });
