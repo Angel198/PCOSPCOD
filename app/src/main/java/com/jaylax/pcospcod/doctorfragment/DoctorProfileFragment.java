@@ -4,6 +4,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,11 +14,6 @@ import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Base64;
@@ -25,7 +21,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -33,7 +31,6 @@ import android.widget.TextView;
 
 import com.jaylax.pcospcod.DoctorLoginActivity;
 import com.jaylax.pcospcod.R;
-import com.jaylax.pcospcod.doctoractivities.DoctorProfileActivity;
 import com.jaylax.pcospcod.util.RequestHandler;
 import com.jaylax.pcospcod.util.Utility;
 import com.mikhaellopez.circularimageview.CircularImageView;
@@ -47,6 +44,10 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 
 
 public class DoctorProfileFragment extends Fragment {
@@ -137,30 +138,22 @@ public class DoctorProfileFragment extends Fragment {
                         {
                             Log.d("response", s);
                             JSONObject obj = new JSONObject(s);
-//                            JSONArray jsonArray = obj.getJSONArray("data");
+//
+                            final Dialog dialog = new Dialog(getContext());
+                            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
+                            dialog.setContentView(R.layout.dialog_info_doctor);
+                            dialog.setCancelable(true);
 
-//                            for(int i = 0; i < jsonArray.length(); ++i) {
-//
-//                                JSONObject c = jsonArray.getJSONObject(i);
-//
-//                                String a = c.getString("age");
-//                                String b = c.getString("mobile_number");
-//                                String d = c.getString("city");
-//                                String e = c.getString("first_name");
-//                                String f = c.getString("last_name");
-//                                String g = c.getString("birth_date");
-//                                String h = c.getString("country_code");
-//                                String j = c.getString("pin_code");
-//                                String k = c.getString("address");
-//                                String l = c.getString("weight");
-//                                String m = c.getString("height");
-//
-//                                contact.setText(b);
-//                                height.setText(m);
-//                                age.setText(a +" Yr");
-//                                weight.setText(l +" Kg");
-//                                birth_Date.setText(g);
-//                                p_name.setText(e +" "+f);
+                            ImageView icon = dialog.findViewById(R.id.icon_only);
+
+                            icon.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    dialog.dismiss();
+                                }
+                            });
+
+                            dialog.show();
 
                         } catch (JSONException e) {
                             e.printStackTrace();
