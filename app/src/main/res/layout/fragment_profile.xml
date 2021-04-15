@@ -96,7 +96,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:id="@+id/layout_two"
-                            android:background="@drawable/treatment_final"
+                            android:background="@drawable/balance_treatment"
                             android:orientation="vertical">
 
                             <TextView

@@ -118,6 +118,8 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
             builder.setNegativeButton(R.string.txt_no, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
+                    getdata_skipped(S_date);
+
                 }
             });
             AlertDialog dialog = builder.create();
@@ -432,6 +434,67 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
                 params.put("patient_id", user_id);
                 params.put("treatment_date", dateee);
                 params.put("status", "Completed");
+                return requestHandler.sendPostRequest("http://pcospcod.curepcos.in/api/patient_treatment", params);
+
+            }
+
+        }
+
+        UserLogin ul = new UserLogin();
+        ul.execute();
+
+    }
+
+
+    public void getdata_skipped(String dateee) {
+        class UserLogin extends AsyncTask<Void, Void, String> {
+
+            ProgressBar progressBar;
+
+            @Override
+            protected void onPreExecute() {
+                Log.d("newwwss", "Login Function Called PreExecute");
+
+                super.onPreExecute();
+
+                progressBar = new ProgressBar(getApplicationContext());
+                progressBar.setVisibility(View.VISIBLE);
+
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+
+                super.onPostExecute(s);
+                progressBar.setVisibility(View.GONE);
+
+                try {
+
+                    Log.d("response", s);
+                    JSONObject obj = new JSONObject(s);
+                    JSONObject jj = obj.getJSONObject("data");
+
+                    String treatment_date = jj.getString("next_treatment_date");
+                    String treatment_status = jj.getString("status");
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @SuppressLint("WrongThread")
+            @Override
+            protected String doInBackground(Void... voids) {
+                //Creating request handler object
+                RequestHandler requestHandler = new RequestHandler();
+
+                //Creating request parameters
+                HashMap<String, String> params = new HashMap<>();
+
+                params.put("patient_id", user_id);
+                params.put("treatment_date", dateee);
+                params.put("status", "Skip");
                 return requestHandler.sendPostRequest("http://pcospcod.curepcos.in/api/patient_treatment", params);
 
             }
