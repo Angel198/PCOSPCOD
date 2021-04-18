@@ -1,12 +1,5 @@
 package com.jaylax.pcospcod.patientactivities;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -30,6 +23,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import com.jaylax.pcospcod.LoginActivity;
 import com.jaylax.pcospcod.R;
 import com.jaylax.pcospcod.patienteditprofile.EditPatientContactFragment;
@@ -40,15 +34,24 @@ import com.jaylax.pcospcod.patienteditprofile.EditPatientWeightFragment;
 import com.jaylax.pcospcod.util.RequestHandler;
 import com.jaylax.pcospcod.util.Utility;
 import com.mikhaellopez.circularimageview.CircularImageView;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class PatientProfileActivity extends AppCompatActivity {
 
@@ -61,6 +64,7 @@ public class PatientProfileActivity extends AppCompatActivity {
     CircularImageView profile;
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
     private String userChoosenTask;
+    TextView remove;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +78,7 @@ public class PatientProfileActivity extends AppCompatActivity {
         status = (TextView) findViewById(R.id.p_marital_status);
         height = (TextView) findViewById(R.id.p_height);
         weight = (TextView) findViewById(R.id.p_weight);
+        remove = (TextView) findViewById(R.id.remove);
         age = (TextView) findViewById(R.id.p_age);
         birth_Date = (TextView) findViewById(R.id.p_birthdate);
         p_name = (TextView) findViewById(R.id.p_name);
@@ -85,6 +90,8 @@ public class PatientProfileActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences(LoginActivity.MyPREFERENCES, Context.MODE_PRIVATE);
         user_id = sharedPreferences.getString("userid",null);
         name = sharedPreferences.getString("nn",null);
+
+        editor = sharedPreferences.edit();
 
         p_name.setText(name);
 
@@ -164,10 +171,10 @@ public class PatientProfileActivity extends AppCompatActivity {
 
                 frameLayout.setVisibility(View.VISIBLE);
 
-                Bundle bundle = new Bundle();
-                bundle.putString("weight", _weight);
-                EditPatientWeightFragment fragobj = new EditPatientWeightFragment();
-                fragobj.setArguments(bundle);
+//                Bundle bundle = new Bundle();
+//                bundle.putString("weight", _weight);
+//                EditPatientWeightFragment fragobj = new EditPatientWeightFragment();
+//                fragobj.setArguments(bundle);
 
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction ft = fragmentManager.beginTransaction();
@@ -281,18 +288,31 @@ public class PatientProfileActivity extends AppCompatActivity {
                         String em = c.getString("email");
                         String st = c.getString("status");
 
+                        if (image.equals("null"))
+                        {
+                            remove.setVisibility(View.VISIBLE);
+                        }
+                        else {
+                            byte[] decodestring = Base64.decode(image,Base64.DEFAULT);
+                            Bitmap decodeByte = BitmapFactory.decodeByteArray(decodestring,0,decodestring.length);
+                            profile.setImageBitmap(decodeByte);
 
-                        byte[] decodestring = Base64.decode(image,Base64.DEFAULT);
-                        Bitmap decodeByte = BitmapFactory.decodeByteArray(decodestring,0,decodestring.length);
+                            remove.setText("");
+                            remove.setVisibility(View.GONE);
+                        }
+
 
                         contact.setText(b);
                         height.setText(_height);
                         age.setText(a +" Yr");
                         weight.setText(_weight +" Kg");
                         birth_Date.setText(g);
-                        profile.setImageBitmap(decodeByte);
                         email.setText(em);
                         status.setText(st);
+                        editor.putString("ps_con",b);
+                        editor.putString("ps_email",em);
+                        editor.apply();
+                        editor.commit();
 //                        p_name.setText(e +" "+f);
 
                     }
@@ -434,6 +454,7 @@ public class PatientProfileActivity extends AppCompatActivity {
                 System.currentTimeMillis() + ".jpg");
 
         FileOutputStream fo;
+
         try {
             destination.createNewFile();
             fo = new FileOutputStream(destination);
@@ -444,10 +465,15 @@ public class PatientProfileActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         uploadimage();
 
         profile.setImageBitmap(thumbnail);
+        remove.setText("");
+        remove.setVisibility(View.GONE);
+
     }
+
 
     @SuppressWarnings("deprecation")
     private void onSelectFromGalleryResult(Intent data) {
@@ -472,7 +498,8 @@ public class PatientProfileActivity extends AppCompatActivity {
         }
 
         profile.setImageBitmap(bm);
-
+        remove.setText("");
+        remove.setVisibility(View.GONE);
     }
 
     public void uploadimage()

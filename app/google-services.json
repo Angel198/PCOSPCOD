@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "938269276779",
+    "firebase_url": "https://pcospcod-default-rtdb.firebaseio.com",
     "project_id": "pcospcod",
     "storage_bucket": "pcospcod.appspot.com"
   },
@@ -19,6 +20,22 @@
           "android_info": {
             "package_name": "com.jaylax.pcospcod",
             "certificate_hash": "41becffc6ba4a79e86d61729e4aba88f2d475fc4"
+          }
+        },
+        {
+          "client_id": "938269276779-df51q9p7mkal2vpe48lvb7fqp65j4sc6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jaylax.pcospcod",
+            "certificate_hash": "817bc11ff61c271f341cb26d93c7cbb5693bfb0e"
+          }
+        },
+        {
+          "client_id": "938269276779-fhu50t14r396raafirnu11d1057aks7e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jaylax.pcospcod",
+            "certificate_hash": "35e87cd62c02c283127b9513f0696ba847b39aba"
           }
         },
         {

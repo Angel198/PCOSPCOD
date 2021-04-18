@@ -66,8 +66,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/grey_60"
-                        android:padding="5dp"
-                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"
+                        android:textSize="15sp"
                         android:text="Once hormones get disturbed first of all your menstrual cycle will be irregular, the flow will reduce, or will start missing the menstrual cycle. When this thing happens, many females simply use to go to medical stores, getting medicines, and having menstrual cycles."
                         android:justificationMode="inter_word"/>
 
@@ -77,8 +79,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_large"
                         android:textColor="@color/grey_60"
-                        android:padding="5dp"
-                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"
+                        android:textSize="15sp"
                         android:text="Many females use to go to Doctor"
                         android:justificationMode="inter_word"/>
 
@@ -86,8 +90,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/grey_60"
-                        android:padding="5dp"
-                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"
+                        android:textSize="15sp"
                         android:text="For Example\n\n
 Any Gynecologist: When females are approaching Gynecologist, first of all, will prescribe a number of hormones blood tests and will do USG (Sonography) or will say please go to the Diagnostic center and do USG. When they do USG and found cysts in ovaries, immediately they will mention having PCO, PCOS, or PCOD."
                         android:justificationMode="inter_word"/>
@@ -97,8 +103,10 @@ Any Gynecologist: When females are approaching Gynecologist, first of all, will 
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_large"
                         android:textColor="@color/grey_60"
-                        android:padding="5dp"
-                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"
+                        android:textSize="15sp"
                         android:text="Gynecologists will normally provide Metformin, Contraceptive pills, 21 days of medicine, etc. The gynecologist will tell lose weight to the obese patients and will say change lifestyle. Once a female start taking medicines, she will get the menstrual cycle till the female is consuming medicines and till the effect of medicines are there in the body. When a female will stop medicines and again when she faces a problem, again she will visit Gynecologist. The doctor will tell you that I have informed you to lose weight, you did not lose? Your Doctor will again prescribe medicines and ask you to lose weight. This cycle will never be going to stop. If you have observed that your Doctor will never go to ask repeat Hormones blood test, but sure, they all will do USG, follicular study, etc. Please note that they do not have any kind of medicines or injections which can balance hormones and they will never tell to any patient that there is no medicine to treat PCOS or PCOD but as patients use to go to Gynecologist they have to provide medicines."
                         android:justificationMode="inter_word"/>
 
@@ -107,8 +115,10 @@ Any Gynecologist: When females are approaching Gynecologist, first of all, will 
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_large"
                         android:textColor="@color/grey_60"
-                        android:padding="5dp"
-                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"
                         android:text="Ayurvedic Doctor or Homeopathy Doctor: This Doctor will not even do hormone tests or USG; they all will provide you medicines and they also will tell patients to lose weight and change lifestyle. By taking medicines, you will get menstrual cycle and once you stop again same problems."
                         android:justificationMode="inter_word"/>
 
@@ -117,8 +127,10 @@ Any Gynecologist: When females are approaching Gynecologist, first of all, will 
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_large"
                         android:textColor="@color/grey_60"
-                        android:padding="5dp"
-                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"
+                        android:textSize="15sp"
                         android:text="Dietician &amp; Nutritionist: Many patients after doing Google they always think and feel that let’s go to a well-known Nutritionist. Who always used to claim that by a balanced diet, nutrition, and different kind of supplements PCOS and PCOD can be reverse If you are visiting any of well-known dietitian and ask them please show me some of the patient’s hormones report They all will tell you sorry, we are not a Doctor and we are not allowed to prescribe test or medicine!"
                         android:justificationMode="inter_word"/>
 

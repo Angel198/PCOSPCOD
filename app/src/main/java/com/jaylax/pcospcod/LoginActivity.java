@@ -2,6 +2,7 @@ package com.jaylax.pcospcod;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -28,11 +29,8 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.jaylax.pcospcod.util.RequestHandler;
 
@@ -41,7 +39,6 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -94,6 +91,7 @@ public class LoginActivity extends AppCompatActivity {
                 getAddress();
             };
         };
+
         startLocationUpdates();
 
         sp = getSharedPreferences(MyPREFERENCES,MODE_PRIVATE);
@@ -104,7 +102,7 @@ public class LoginActivity extends AppCompatActivity {
 
         Log.i("id",androidId);
 
-        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
+         FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
             newToken = instanceIdResult.getToken();
             Log.e("newToken", newToken);
         });
@@ -122,24 +120,32 @@ public class LoginActivity extends AppCompatActivity {
                 class UserLogin extends AsyncTask<Void, Void, String> {
 
                     ProgressBar progressBar;
+                    ProgressDialog mProgressDialog;
 
                     @Override
                     protected void onPreExecute() {
                         Log.d("newwwss", "Login Function Called PreExecute");
                         super.onPreExecute();
-                        progressBar = new ProgressBar(LoginActivity.this);
-                        progressBar.setVisibility(View.VISIBLE);
+                        mProgressDialog =  new ProgressDialog(LoginActivity.this);
+                        mProgressDialog.setMessage("Waiting.....");
+                        mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                        mProgressDialog.setCancelable(true);
+                        mProgressDialog.show();
+
+//                        progressBar = new ProgressBar(LoginActivity.this);
+//                        progressBar.setVisibility(View.VISIBLE);
                     }
 
                     @Override
                     protected void onPostExecute(String s) {
 
                         super.onPostExecute(s);
-                        progressBar.setVisibility(View.GONE);
-                        Log.d("response", s);
+//                        progressBar.
+                        mProgressDialog.cancel();
+                        Log.i("response", s);
                         try {
 
-                            Log.d("response", s);
+                            Log.i("response", s);
                             JSONObject obj = new JSONObject(s);
                             JSONObject jj = obj.getJSONObject("data");
 
@@ -150,21 +156,21 @@ public class LoginActivity extends AppCompatActivity {
 
                             Log.i("r_name",nn);
 
-                            databaseReference = FirebaseDatabase.getInstance().getReference().child(newToken);
-
-                            databaseReference.addValueEventListener(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(@NonNull DataSnapshot snapshot)
-                                {
-
-                                    databaseReference.child("user_id").setValue(user_id);
-                                }
-
-                                @Override
-                                public void onCancelled(@NonNull DatabaseError error) {
-
-                                }
-                            });
+//                            databaseReference = FirebaseDatabase.getInstance().getReference().child(newToken);
+//
+//                            databaseReference.addValueEventListener(new ValueEventListener() {
+//                                @Override
+//                                public void onDataChange(@NonNull DataSnapshot snapshot)
+//                                {
+//
+//                                    databaseReference.child("user_id").setValue(user_id);
+//                                }
+//
+//                                @Override
+//                                public void onCancelled(@NonNull DatabaseError error) {
+//
+//                                }
+//                            });
 
 
                             Intent intent = new Intent(LoginActivity.this,OTPActivity.class);

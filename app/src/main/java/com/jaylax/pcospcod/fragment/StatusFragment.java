@@ -3,16 +3,15 @@ package com.jaylax.pcospcod.fragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.jaylax.pcospcod.patientactivities.PatientDashboardActivity;
 import com.jaylax.pcospcod.R;
+import com.jaylax.pcospcod.patientactivities.PatientDashboardActivity;
+
+import androidx.fragment.app.Fragment;
 
 public class StatusFragment extends Fragment {
 
@@ -30,10 +29,8 @@ public class StatusFragment extends Fragment {
 
         ((PatientDashboardActivity)getActivity()).setToolbarTitle("Consult a Doctor");
 
-
         sharedPreferences = getContext().getSharedPreferences(InquiryFragment.MyPREFERENCES_TEMP, Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
-
 
         next = (TextView) view.findViewById(R.id.bt_submit);
         single = (TextView) view.findViewById(R.id.single);

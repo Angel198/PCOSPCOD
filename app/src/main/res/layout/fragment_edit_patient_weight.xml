@@ -25,7 +25,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:background="@color/purple_500"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="#014446"
                 android:orientation="vertical">
 
                 <TextView
@@ -33,10 +35,9 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/user_height"
                     android:padding="15dp"
+                    android:gravity="center"
                     android:textStyle="bold"
-                    android:layout_marginTop="100dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
                     android:textSize="22sp"
                     android:fontFamily="@font/poppins_medium"
                     android:textColor="@color/white"
@@ -60,17 +61,16 @@
                     app:np_dividerType="side_lines"
                     app:np_max="100"
                     app:np_min="0"
+                    app:np_textSize="17sp"
                     app:np_orientation="horizontal"
                     app:np_fadingEdgeEnabled="false"
                     app:np_order="ascending"
                     app:np_wrapSelectorWheel="true"
                     app:np_selectedTextColor="@color/purple_500"
-                    app:np_textColor="@color/grey_40"
+                    app:np_textColor="@color/black_5"
                     app:np_dividerColor="@color/teal_300"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true" />
-
-
 
             </LinearLayout>
 
@@ -80,7 +80,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:hint="0000"
         android:padding="8dp"
         android:layout_marginBottom="25dp"
@@ -93,8 +93,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:textAlignment="center"
-        android:textColor="@color/purple_200"
-        android:background="@drawable/add_border_otp"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_rect_primary"
         android:gravity="center" />
 
 </RelativeLayout>

@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jaylax.pcospcod.R;
@@ -47,13 +46,13 @@ public class NotificationAdapter extends BaseAdapter {
 //        ImageView icon = (ImageView) view.findViewById(R.id.profile_image); // get the reference of ImageView
         TextView _name = (TextView) view.findViewById(R.id.name);
         TextView _detail = (TextView) view.findViewById(R.id.book);
-        TextView _status = (TextView) view.findViewById(R.id.time_);
+//        TextView _status = (TextView) view.findViewById(R.id.time_);
 
 
 //        icon.setImageResource(logos[i]); // set logo images
         _name.setText(name[i]);
         _detail.setText(detail[i]);
-        _status.setText(status[i]);
+//        _status.setText(status[i]);
 
 
         return view;

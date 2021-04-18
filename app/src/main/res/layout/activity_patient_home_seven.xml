@@ -65,6 +65,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
+                        android:textStyle="bold"
                         android:text="AMH (Anti Mullerian Hormones)"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/grey_60"
@@ -82,8 +83,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/grey_60"
-                        android:padding="5dp"
-                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:lineSpacingExtra="5dp"
                         android:layout_marginTop="5dp"
                         android:text="The mechanism underlying an ovulation in the polycystic ovary syndrome (PCOS) remains unclear, although an excessive number of small antral follicles at ultrasound scans and discrepancies with selected follicles sustain the hypothesis of altered follicular development. Anti-Müllerian (AMH) hormone is a member of TGF-b super family of growth factors produced by granulosa cells of pre- and small-antral follicle. The 2-to-3-fold increase in the number of growing follicles in the ovary from PCOS women is reflected by an increase in serum concentration of AMH and thus, this hormone may be a good marker of PCOS."
                         android:justificationMode="inter_word"/>
@@ -94,10 +97,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_large"
                         android:justificationMode="inter_word"
-                        android:padding="5dp"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"
                         android:text="PCOS PCOD Clinic is using AMH is the main marker to treat patients of PCOS due to that we always enrol patients after looking AMH level and if they can cure by our treatment. We always ask the patient to do an AMH test and before and after treatment. If the patient is having any other issue not to get an irregular period after balancing AMH level, in that case, we are informing the patient to get check any other irregular menstrual cycle-related issues with Gynaecologist for further support, as an irregular menstrual cycle is having multiple reasons. PCOS PCOD Clinic is just balancing hormones and if any patient is having an irregular menstrual cycle due to PCOS/PCOD problem. We are treating patients by balancing AMH (Anti Mullerian Hormones) and we are giving guarantee in writing to bring AMH in normal level."
                         android:textColor="@color/grey_60"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
@@ -128,6 +133,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Insulin Resistance!"
+                        android:textStyle="bold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/grey_60"
                         app:fontFamily="sans-serif-medium" />
@@ -144,8 +150,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/grey_60"
-                        android:padding="5dp"
-                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:lineSpacingExtra="5dp"
+                        android:textStyle="bold"
                         android:text="Insulin is a hormone secreted by your pancreas. Its main role is to regulate the amount of nutrients circulating in your bloodstream. Although insulin is mostly implicated in blood sugar management, it also affects fat and protein metabolism. When you eat a meal that contains carbs. the amount of blood sugar in your bloodstream increases. The cells in your pancreas sense this increase and release insulin into your blood. Insulin then travels around your bloodstream, telling your cells to pick up sugar from your blood. This process results in reduced blood sugar levels."
                         android:layout_marginTop="5dp"
                         android:justificationMode="inter_word"/>
@@ -156,20 +164,23 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_large"
                         android:justificationMode="inter_word"
-                        android:padding="5dp"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"
                         android:text="Especially high blood sugar can have toxic effects, causing severe harm and potentially leading to death if untreated."
-                        android:textColor="@color/white"
-                        android:textSize="16sp" />
+                        android:textColor="@color/grey_60"
+                        android:textSize="15sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_large"
                         android:justificationMode="inter_word"
-                        android:padding="5dp"
+                        android:padding="8dp"
+                        android:lineSpacingExtra="5dp"
                         android:text="PCOS is a disorder of unexplained hyperandrogenism and menstrual irregularity. The menstrual irregularity may be a marker for the insulin resistance that characterizes the syndrome. It is now clear that PCOS is often associated with substantial insulin resistance, as well as with defects in insulin secretion. Menstrual disorders are common in insulin-resistance states. In women with polycystic ovary syndrome, menstrual irregularity related to underlying insulin resistance. Improving insulin sensitivity improve menstrual regularity."
-                        android:textColor="@color/white"
-                        android:textSize="16sp" />
+                        android:textColor="@color/grey_60"
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
@@ -200,6 +211,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Vitamin D"
+                        android:textStyle="bold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/grey_60"
                         app:fontFamily="sans-serif-medium" />
@@ -216,8 +228,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/grey_60"
-                        android:padding="5dp"
-                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"
                         android:text="Vitamin D is not just Vitamin but also a hormone. This means that cells in the body have vitamin D receptors on them. Not having sufficient amount of Vitamin D can affect most systems in the body. A deficiency of Vitamin D not only cause poor bone mineralization but also has been implicated in numerous chronic diseases, including diabetes, metabolic syndromes, heart disease, cancer and hypertension."
                         android:layout_marginTop="5dp"
                         android:justificationMode="inter_word"/>
@@ -252,6 +266,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Hypothyroidism (TSH)"
+                        android:textStyle="bold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/grey_60"
                         app:fontFamily="sans-serif-medium" />
@@ -268,8 +283,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/grey_60"
-                        android:padding="5dp"
-                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"
                         android:text="Patients may not be aware of the relationship, but there's a growing consensus in medical community that hypothyroidism and polycystic ovary syndrome are closely linked. There are many overlapping characteristics between PCOS symptoms and in underactive thyroid gland (Hypothyroidism). which are two of the most common endocrine disorders. Understanding the similarities and differences between Hypothyroidism and PCOS - and having right tools to aid in evaluation - can lean to accurate diagnosis and inform optimal treatment decisions."
                         android:layout_marginTop="5dp"
                         android:justificationMode="inter_word"/>

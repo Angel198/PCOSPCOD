@@ -6,10 +6,10 @@
             <item android:bottom="4dp" android:left="4dp" android:right="4dp" android:top="4dp">
                 <shape android:shape="rectangle">
                     <corners android:radius="10dp"/>
-                    <gradient android:centerColor="@color/teal_300"
-                        android:startColor="@color/teal_200"
+                    <gradient android:centerColor="#014446"
+                        android:startColor="#014446"
                         android:angle="135"
-                        android:endColor="@color/teal_300"/>
+                        android:endColor="#014446"/>
 
                     <!--                    <solid android:color="@color/purple_700" />-->
                     <padding android:bottom="0dp" android:left="0dp" android:right="0dp" android:top="0dp" />
@@ -25,10 +25,10 @@
             <item android:bottom="4dp" android:left="4dp" android:right="4dp" android:top="4dp">
                 <shape android:shape="rectangle">
                     <corners android:radius="10dp"/>
-                    <gradient android:centerColor="@color/teal_300"
-                        android:startColor="@color/teal_200"
+                    <gradient android:centerColor="#014446"
+                        android:startColor="#014446"
                         android:angle="135"
-                        android:endColor="@color/teal_300"/>
+                        android:endColor="#014446"/>
 <!--                    <solid android:color="@color/purple_700" />-->
                     <padding android:bottom="0dp" android:left="0dp" android:right="0dp" android:top="0dp" />
                     <size android:width="110dp" android:height="40dp" />
@@ -44,10 +44,10 @@
             <item android:bottom="4dp" android:left="4dp" android:right="4dp" android:top="4dp">
                 <shape android:shape="rectangle">
                     <corners android:radius="10dp"/>
-                    <gradient android:centerColor="@color/teal_300"
-                        android:startColor="@color/teal_200"
+                    <gradient android:centerColor="#014446"
+                        android:startColor="#014446"
                         android:angle="135"
-                        android:endColor="@color/teal_300"/>
+                        android:endColor="#014446"/>
 
                     <!--                    <solid android:color="@color/purple_700" />-->
                     <padding android:bottom="0dp" android:left="0dp" android:right="0dp" android:top="0dp" />

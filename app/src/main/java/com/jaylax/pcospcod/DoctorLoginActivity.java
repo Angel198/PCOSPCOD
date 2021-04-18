@@ -2,6 +2,7 @@ package com.jaylax.pcospcod;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -15,7 +16,6 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,11 +27,8 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.jaylax.pcospcod.util.RequestHandler;
 
@@ -40,7 +37,6 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -121,21 +117,28 @@ public class DoctorLoginActivity extends AppCompatActivity {
 
                 class UserLogin extends AsyncTask<Void, Void, String> {
 
-                    ProgressBar progressBar;
+//                    ProgressBar progressBar;
+                    ProgressDialog mProgressDialog;
 
                     @Override
                     protected void onPreExecute() {
                         Log.d("newwwss", "Login Function Called PreExecute");
                         super.onPreExecute();
-                        progressBar = new ProgressBar(DoctorLoginActivity.this);
-                        progressBar.setVisibility(View.VISIBLE);
+//                        progressBar = new ProgressBar(DoctorLoginActivity.this);
+//                        progressBar.setVisibility(View.VISIBLE);
+                        mProgressDialog =  new ProgressDialog(DoctorLoginActivity.this);
+                        mProgressDialog.setMessage("Waiting.....");
+                        mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                        mProgressDialog.setCancelable(true);
+                        mProgressDialog.show();
                     }
 
                     @Override
                     protected void onPostExecute(String s) {
 
                         super.onPostExecute(s);
-                        progressBar.setVisibility(View.GONE);
+                        mProgressDialog.cancel();
+//                        progressBar.setVisibility(View.GONE);
 
                         try {
 
@@ -149,26 +152,23 @@ public class DoctorLoginActivity extends AppCompatActivity {
                             String ss= jj.getString("device_token");
                             Log.i("r_name",nn);
 
-
-
-
-                            databaseReference = FirebaseDatabase.getInstance().getReference().child(newToken);
-
-                            databaseReference.addValueEventListener(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(@NonNull DataSnapshot snapshot)
-                                {
-
-                                    databaseReference.child("user_id").setValue(user_id);
-//                                    databaseReference.child("device_token").setValue(androidId);
-//                                    databaseReference.child("user_type").setValue("1");
-                                }
-
-                                @Override
-                                public void onCancelled(@NonNull DatabaseError error) {
-
-                                }
-                            });
+//                            databaseReference = FirebaseDatabase.getInstance().getReference().child(newToken);
+//
+//                            databaseReference.addValueEventListener(new ValueEventListener() {
+//                                @Override
+//                                public void onDataChange(@NonNull DataSnapshot snapshot)
+//                                {
+//
+//                                    databaseReference.child("user_id").setValue(user_id);
+////                                    databaseReference.child("device_token").setValue(androidId);
+////                                    databaseReference.child("user_type").setValue("1");
+//                                }
+//
+//                                @Override
+//                                public void onCancelled(@NonNull DatabaseError error) {
+//
+//                                }
+//                            });
 
                             Intent intent = new Intent(DoctorLoginActivity.this,OTPActivity.class);
                             editor.putString("userid", user_id);
@@ -194,10 +194,8 @@ public class DoctorLoginActivity extends AppCompatActivity {
                     protected String doInBackground(Void... voids) {
                         //Creating request handler object
                         RequestHandler requestHandler = new RequestHandler();
-
                         //Creating request parameters
                         HashMap<String, String> params = new HashMap<>();
-
                         params.put("name", _name);
                         params.put("mobile_number", _number);
                         params.put("city", lo);

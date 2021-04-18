@@ -6,35 +6,31 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.jaylax.pcospcod.LoginActivity;
 import com.jaylax.pcospcod.R;
-import com.jaylax.pcospcod.patientactivities.PatientProfileActivity;
 import com.jaylax.pcospcod.util.RequestHandler;
 
 import org.json.JSONObject;
 
 import java.util.HashMap;
 
+import androidx.fragment.app.Fragment;
+
 
 public class EditPatientContactFragment extends Fragment {
 
     TextView next;
     EditText contact , phon_code;
-    String phone, number, number_code;
+    String phone, number, number_code, _code;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
     String user_id, name, token;
@@ -48,12 +44,13 @@ public class EditPatientContactFragment extends Fragment {
         sharedPreferences = getContext().getSharedPreferences(LoginActivity.MyPREFERENCES, Context.MODE_PRIVATE);
         user_id = sharedPreferences.getString("userid",null);
         number = sharedPreferences.getString("edit_contact",null);
+        _code = sharedPreferences.getString("ps_con",null);
 
         next = (TextView) view.findViewById(R.id.done);
         contact = (EditText) view.findViewById(R.id.phone_number);
         phon_code = (EditText) view.findViewById(R.id.phone_code);
 
-        contact.setText(number);
+        contact.setText(_code);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,8 +88,22 @@ public class EditPatientContactFragment extends Fragment {
 
                             if (rs.equals("true"))
                             {
-                                getFragmentManager().popBackStack();
-                                ((PatientProfileActivity)getActivity()).setvisibility();
+                                new Handler().post(new Runnable() {
+
+                                    @Override
+                                    public void run()
+                                    {
+                                        Intent intent = getActivity().getIntent();
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK
+                                                | Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                                        getActivity().overridePendingTransition(0, 0);
+                                        getActivity().finish();
+
+                                        startActivity(intent);
+                                    }
+                                });
+//                                getFragmentManager().popBackStack();
+//                                ((PatientProfileActivity)getActivity()).setvisibility();
 
                             }
 

@@ -59,17 +59,19 @@
                     android:layout_marginTop="@dimen/spacing_large"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/check"/>
+                        android:layout_marginTop="5dp"
+                        android:text="1)"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/grey_60"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:padding="2dp"
                         android:textStyle="bold"
                         android:layout_marginLeft="10dp"
@@ -85,11 +87,13 @@
                     android:layout_marginTop="@dimen/spacing_large"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/check"/>
+                        android:layout_marginTop="5dp"
+                        android:text="2)"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -98,7 +102,7 @@
                         android:padding="2dp"
                         android:textStyle="bold"
                         android:text="Hirsutism or too much hair on the face, chin or any other body part where males have hair."
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:layout_marginLeft="10dp"
                         android:justificationMode="inter_word"/>
 
@@ -111,11 +115,13 @@
                     android:layout_marginTop="@dimen/spacing_large"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/check"/>
+                        android:layout_marginTop="4dp"
+                        android:text="3)"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -123,7 +129,7 @@
                         android:textColor="@color/grey_60"
                         android:padding="2dp"
                         android:textStyle="bold"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:layout_marginLeft="10dp"
                         android:text="Acne on the face, chest and upper back."
                         android:justificationMode="inter_word"/>
@@ -137,11 +143,13 @@
                     android:layout_marginTop="@dimen/spacing_large"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/check"/>
+                        android:layout_marginTop="5dp"
+                        android:text="4)"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -151,7 +159,7 @@
                         android:textColor="@color/grey_60"
                         android:padding="2dp"
                         android:text="Hair loss or thinning hair."
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:justificationMode="inter_word"/>
 
@@ -163,18 +171,20 @@
                     android:layout_marginTop="@dimen/spacing_large"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/check"/>
+                        android:layout_marginTop="5dp"
+                        android:text="5)"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/grey_60"
                         android:padding="2dp"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:layout_marginLeft="10dp"
                         android:text="Weight gain."
                         android:textStyle="bold"
@@ -190,11 +200,13 @@
                     android:layout_marginTop="@dimen/spacing_large"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/check"/>
+                        android:layout_marginTop="5dp"
+                        android:text="6)"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -202,7 +214,7 @@
                         android:padding="2dp"
                         android:textStyle="bold"
                         android:textColor="@color/grey_60"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:layout_marginTop="2dp"
                         android:layout_marginLeft="10dp"
                         android:text="Inability to lose weight."
@@ -218,11 +230,13 @@
                     android:layout_marginTop="@dimen/spacing_large"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/check"/>
+                        android:layout_marginTop="5dp"
+                        android:text="7)"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -232,7 +246,7 @@
                         android:textColor="@color/grey_60"
                         android:padding="2dp"
                         android:text="Skin darkening along neck creases, in the groin, and underneath breasts."
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:justificationMode="inter_word"/>
 
@@ -245,11 +259,13 @@
                     android:layout_marginTop="@dimen/spacing_large"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/check"/>
+                        android:layout_marginTop="5dp"
+                        android:text="8)"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -259,7 +275,7 @@
                         android:textColor="@color/grey_60"
                         android:padding="2dp"
                         android:text="Headaches."
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:justificationMode="inter_word"/>
 
@@ -272,11 +288,13 @@
                     android:layout_marginTop="@dimen/spacing_large"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/check"/>
+                        android:layout_marginTop="5dp"
+                        android:text="9)"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -287,7 +305,7 @@
                         android:padding="2dp"
                         android:text="Mood swings."
                         android:textStyle="bold"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:justificationMode="inter_word"/>
 
                 </LinearLayout>
@@ -299,11 +317,13 @@
                     android:layout_marginTop="@dimen/spacing_large"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/check"/>
+                        android:layout_marginTop="5dp"
+                        android:text="10)"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -313,7 +333,7 @@
                         android:textColor="@color/grey_60"
                         android:padding="2dp"
                         android:text="Sudden anger outbursts."
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:justificationMode="inter_word"/>
 
@@ -326,11 +346,13 @@
                     android:layout_marginTop="@dimen/spacing_large"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/check"/>
+                        android:layout_marginTop="5dp"
+                        android:text="11)"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -339,7 +361,7 @@
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/grey_60"
                         android:padding="2dp"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:text="Depression."
                         android:justificationMode="inter_word"/>
@@ -353,11 +375,13 @@
                     android:layout_marginTop="@dimen/spacing_large"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/check"/>
+                        android:layout_marginTop="5dp"
+                        android:text="12)"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -368,7 +392,7 @@
                         android:padding="2dp"
                         android:textStyle="bold"
                         android:text="Unable to sleep."
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:justificationMode="inter_word"/>
 
                 </LinearLayout>
@@ -380,11 +404,13 @@
                     android:layout_marginTop="@dimen/spacing_large"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/check"/>
+                        android:layout_marginTop="5dp"
+                        android:text="13)"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -393,7 +419,7 @@
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/grey_60"
                         android:padding="2dp"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:text="Unable to focus or concentrate on anything."
                         android:justificationMode="inter_word"/>
@@ -407,11 +433,13 @@
                     android:layout_marginTop="@dimen/spacing_large"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/check"/>
+                        android:layout_marginTop="5dp"
+                        android:text="14)"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -421,7 +449,7 @@
                         android:textColor="@color/grey_60"
                         android:padding="2dp"
                         android:text="Memory loss."
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:justificationMode="inter_word"/>
 

@@ -55,7 +55,7 @@
                             android:text="Name:"
                             android:textStyle="bold"
                             android:textColor="@color/black_5"
-                            android:textSize="17sp"/>
+                            android:textSize="15sp"/>
 
                         <View
                             android:layout_width="25dp"
@@ -66,7 +66,7 @@
                             android:layout_height="wrap_content"
                             android:text=""
                             android:id="@+id/patient_name"
-                            android:textSize="17sp"/>
+                            android:textSize="15sp"/>
 
                     </LinearLayout>
 
@@ -110,7 +110,7 @@
                             android:text="Treatment ID:"
                             android:textStyle="bold"
                             android:textColor="@color/black_5"
-                            android:textSize="17sp"/>
+                            android:textSize="15sp"/>
 
                         <View
                             android:layout_width="42dp"
@@ -121,7 +121,7 @@
                             android:layout_height="wrap_content"
                             android:text=""
                             android:id="@+id/patient_treatment_id"
-                            android:textSize="17sp"/>
+                            android:textSize="15sp"/>
 
                     </LinearLayout>
 
@@ -137,7 +137,7 @@
                             android:text="Treatment Date:"
                             android:textStyle="bold"
                             android:textColor="@color/black_5"
-                            android:textSize="17sp"/>
+                            android:textSize="15sp"/>
 
                         <View
                             android:layout_width="42dp"
@@ -148,7 +148,7 @@
                             android:layout_height="wrap_content"
                             android:text=""
                             android:id="@+id/patient_treatment_date"
-                            android:textSize="17sp"/>
+                            android:textSize="15sp"/>
 
                     </LinearLayout>
 
@@ -164,7 +164,7 @@
                             android:text="Treatment Status:"
                             android:textStyle="bold"
                             android:textColor="@color/black_5"
-                            android:textSize="17sp"/>
+                            android:textSize="15sp"/>
 
                         <View
                             android:layout_width="42dp"
@@ -175,7 +175,7 @@
                             android:layout_height="wrap_content"
                             android:text=""
                             android:id="@+id/patient_treatment_status"
-                            android:textSize="17sp"/>
+                            android:textSize="15sp"/>
 
                     </LinearLayout>
 

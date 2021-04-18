@@ -48,7 +48,7 @@
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:backgroundTint="@color/white"
-                            android:background="@drawable/home"
+                            android:background="@drawable/baseline_home_24"
                             android:layout_gravity="center"/>
 
                         <TextView
@@ -94,7 +94,7 @@
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:background="@drawable/home"
+                            android:background="@drawable/baseline_home_24"
                             android:backgroundTint="@color/white"
                             android:layout_gravity="center"/>
 

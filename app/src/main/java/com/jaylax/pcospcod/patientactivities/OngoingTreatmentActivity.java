@@ -28,7 +28,6 @@ import com.jaylax.pcospcod.R;
 import com.jaylax.pcospcod.util.CalendarModelTreatment;
 import com.jaylax.pcospcod.util.RequestHandler;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -224,6 +223,7 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
                     String treatment_date = jj.getString("next_treatment_date");
                     String treatment_status = jj.getString("status");
 
+                    t_date.setText(treatment_date);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -280,15 +280,10 @@ public class OngoingTreatmentActivity extends AppCompatActivity {
 
                     Log.d("response", s);
                     JSONObject obj = new JSONObject(s);
-                    JSONArray jsonArray = obj.getJSONArray("data");
+                    JSONObject jj = obj.getJSONObject("data");
 
-                    for(int i = 0; i < jsonArray.length(); ++i) {
-
-                        JSONObject c = jsonArray.getJSONObject(i);
-                        treatment_date = c.getString("treatment_date");
-                        treatment_status = c.getString("status");
-
-                    }
+                    treatment_date = jj.getString("treatment_date");
+                    treatment_status = jj.getString("status");
 
                     t_date.setText(treatment_date);
                     editor.putString("s_date", treatment_date);

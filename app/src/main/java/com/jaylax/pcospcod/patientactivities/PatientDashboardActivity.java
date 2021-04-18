@@ -1,13 +1,5 @@
 package com.jaylax.pcospcod.patientactivities;
 
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -22,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.jaylax.pcospcod.LoginActivity;
@@ -37,10 +30,21 @@ import com.jaylax.pcospcod.fragment.ProfileFragment;
 import com.jaylax.pcospcod.fragment.TestimonialFragment;
 import com.jaylax.pcospcod.util.RequestHandler;
 import com.mikhaellopez.circularimageview.CircularImageView;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.HashMap;
+
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class PatientDashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -49,6 +53,7 @@ public class PatientDashboardActivity extends AppCompatActivity implements Navig
     SharedPreferences.Editor editor;
     String user_id, name, token;
     CircularImageView imageView;
+    TextView remove;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,12 +88,12 @@ public class PatientDashboardActivity extends AppCompatActivity implements Navig
         TextView name_header = (TextView) view.findViewById(R.id.name);
         TextView edit_profile = (TextView) view.findViewById(R.id.textView);
         imageView = (CircularImageView) view.findViewById(R.id.nav_image);
+        remove = (TextView) view.findViewById(R.id.remove);
 
         sharedPreferences = getSharedPreferences(LoginActivity.MyPREFERENCES, Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
         user_id = sharedPreferences.getString("userid",null);
         name = sharedPreferences.getString("nn",null);
-
         name_header.setText(name);
 
         displaySelectedScreen(R.id.nav_home);
@@ -192,10 +197,18 @@ public class PatientDashboardActivity extends AppCompatActivity implements Navig
                         String em = c.getString("email");
                         String st = c.getString("status");
 
-                        byte[] decodestring = Base64.decode(image,Base64.DEFAULT);
-                        Bitmap decodeByte = BitmapFactory.decodeByteArray(decodestring,0,decodestring.length);
+                        if (image.equals(""))
+                        {
 
-                        imageView.setImageBitmap(decodeByte);
+                        }
+                        else {
+                            byte[] decodestring = Base64.decode(image,Base64.DEFAULT);
+                            Bitmap decodeByte = BitmapFactory.decodeByteArray(decodestring,0,decodestring.length);
+
+                            imageView.setImageBitmap(decodeByte);
+                            remove.setText("");
+                            remove.setVisibility(View.GONE);
+                        }
 
                         editor.putString("edit_contact",b);
                         editor.putString("edit_email",em);

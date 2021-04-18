@@ -192,7 +192,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_large"
                         android:textColor="@color/grey_60"
-                        android:padding="2dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"
+                        android:textSize="15sp"
                         android:justificationMode="inter_word"
                         android:text="PCOS/PCOD is all about helping women to live a better and healthier life. Headed by Dr.Rajesh Soni, the entire team makes collaborative efforts to heal the huge dilemma of Polycystic Ovarian Syndrome/ Polycystic Ovarian Disease. He pursued his graduation from Innova University, in Wilmington, Delaware. Being a doctor in the field of naturopathic medicine, Dr.Rajesh Soni and his companion Mrs. Geetu Rajesh Soni started their research in the pursuit of finding a remedy that works wonders for the problem that has been hampering the healthy growth in women of nearly all ages. Under the comprehensive investigation of well-known Dr.Dilip Gadhavi (Ob.Gyn.) who has been an exceptional investigator in the field of clinical trials, he successfully cleared them with a 100% ratio." />
 
@@ -202,7 +205,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_large"
                         android:textColor="@color/grey_60"
-                        android:padding="2dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"                        android:textSize="15sp"
                         android:justificationMode="inter_word"
                         android:text="PCOS/PCOD takes pride in claiming to have the research being published in the medical journal of the USA and in Europe. Dr. Rajesh Soni holds vast experience which makes him one of the best doctors to approach if they bear queries about PCOS in their mind. In fact, he triumphantly maintained a ratio of 100% treat during his clinical trial! He has come up with an exceptional and patented remedy for the problem that is:"/>
 
@@ -253,7 +258,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_large"
                         android:textColor="@color/grey_60"
-                        android:padding="2dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"                        android:textSize="15sp"
                         android:justificationMode="inter_word"
                         android:text="In modern-day, women’s system is overloaded with certain toxins that cause an imbalance in their endocrine system which in turn imbalances the hormonal system. This cascading of imbalances leads to PCOS &amp; PCOD. Our 48 Day* The natural minerals used in our therapy of 48 day* effectively work to correct the hormonal imbalance. Eventually, it systemizes the endocrine system of a woman’s body thereby bringing new vitality to all of the organs."/>
 
@@ -272,7 +279,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_large"
                         android:textColor="@color/grey_60"
-                        android:padding="2dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"                        android:textSize="15sp"
                         android:justificationMode="inter_word"
                         android:text="Assured results."/>
 
@@ -280,7 +289,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/grey_60"
-                        android:padding="2dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"                        android:textSize="15sp"
                         android:text="No changes in lifestyle."
                         android:justificationMode="inter_word"/>
 
@@ -288,7 +299,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/grey_60"
-                        android:padding="2dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"                        android:textSize="15sp"
                         android:text="No more worries regarding weight loss."
                         android:justificationMode="inter_word"/>
 
@@ -296,7 +309,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/grey_60"
-                        android:padding="2dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"                        android:textSize="15sp"
                         android:text="No medicines"
                         android:justificationMode="inter_word"/>
 
@@ -304,7 +319,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/grey_60"
-                        android:padding="2dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"                        android:textSize="15sp"
                         android:text="Results in 48 days* (*Duration varies on AMH Level to bring to normal.)"
                         android:justificationMode="inter_word"/>
 

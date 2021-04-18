@@ -96,7 +96,7 @@ public class OTPActivity extends AppCompatActivity {
         resend_otp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendVerificationCodeAgain(num);
+                sendVerificationCodeAgain(_number);
 
             }
         });

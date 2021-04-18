@@ -25,7 +25,6 @@ import com.jaylax.pcospcod.R;
 import com.jaylax.pcospcod.VideoCalling.BaseActivity;
 import com.jaylax.pcospcod.VideoCalling.CallScreenActivity;
 import com.jaylax.pcospcod.VideoCalling.SinchService;
-import com.jaylax.pcospcod.doctoractivities.DoctorProfileActivity;
 import com.jaylax.pcospcod.util.RequestHandler;
 import com.mikhaellopez.circularimageview.CircularImageView;
 import com.sinch.android.rtc.SinchError;
@@ -62,30 +61,33 @@ public class MyDoctorActivity extends BaseActivity implements SinchService.Start
         about = (TextView) findViewById(R.id.doctor_about);
         contact = (TextView) findViewById(R.id.doctor_contact);
         mail = (TextView) findViewById(R.id.doctor_email);
-        voice_call = (FloatingActionButton) findViewById(R.id.voice_call);
-        video_call = (FloatingActionButton) findViewById(R.id.call_video);
+//        voice_call = (FloatingActionButton) findViewById(R.id.voice_call);
+//        video_call = (FloatingActionButton) findViewById(R.id.call_video);
 
         sharedPreferences = getSharedPreferences(LoginActivity.MyPREFERENCES, Context.MODE_PRIVATE);
         user_id = sharedPreferences.getString("userid",null);
         _name = sharedPreferences.getString("nn",null);
+
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(new String[]{Manifest.permission.RECORD_AUDIO, Manifest.permission.CAMERA, Manifest.permission.ACCESS_NETWORK_STATE, Manifest.permission.READ_PHONE_STATE},100);
         }
+
 
         getdata();
 
 
 
-        video_call.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(MyDoctorActivity.this, DoctorProfileActivity.class);
-                startActivity(intent);
-
-            }
-
-        });
+//        video_call.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Intent intent = new Intent(MyDoctorActivity.this, DoctorProfileActivity.class);
+//                startActivity(intent);
+//
+//            }
+//
+//        });
 
 
     }
@@ -201,7 +203,7 @@ public class MyDoctorActivity extends BaseActivity implements SinchService.Start
                         JSONObject c = jsonArray.getJSONObject(i);
 
                         String a = c.getString("name");
-                         doc_id = c.getString("id");
+                        doc_id = c.getString("id");
                         String d = c.getString("specialization");
                         String e = c.getString("hospital_address");
                         String f = c.getString("email");
@@ -210,9 +212,9 @@ public class MyDoctorActivity extends BaseActivity implements SinchService.Start
                         String j = c.getString("profile_image_url");
 
 
-                        editor.putString("doctor_id",doc_id);
-                        editor.apply();
-                        editor.commit();
+//                        editor.putString("doctor_id",doc_id);
+//                        editor.apply();
+//                        editor.commit();
 
                         byte[] decodestring = Base64.decode(j,Base64.DEFAULT);
                         Bitmap decodeByte = BitmapFactory.decodeByteArray(decodestring,0,decodestring.length);

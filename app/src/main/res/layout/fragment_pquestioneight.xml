@@ -27,7 +27,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/purple_500"
+            android:background="@color/white"
             android:orientation="vertical">
 
             <LinearLayout
@@ -44,7 +44,7 @@
                     android:padding="8dp"
                     android:textStyle="bold"
                     android:textSize="20sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black_5"
                     android:text="Have you done?" />
 
                 <LinearLayout
@@ -64,22 +64,20 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/radio_one"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black_5"
                             android:textSize="16sp"
                             android:checked="false"
                             android:textStyle="bold"
-                            android:buttonTint="@color/white"
                             android:text="Laparoscopy"/>
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/radio_two"
-                            android:buttonTint="@color/white"
                             android:textSize="16sp"
                             android:textStyle="bold"
                             android:checked="false"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black_5"
                             android:text="IUI"/>
 
                         <RadioButton
@@ -88,9 +86,8 @@
                             android:id="@+id/radio_three"
                             android:textSize="16sp"
                             android:checked="false"
-                            android:buttonTint="@color/white"
                             android:textStyle="bold"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black_5"
                             android:text="IVF"/>
 
                     </RadioGroup>
@@ -108,7 +105,7 @@
                     android:padding="8dp"
                     android:textStyle="bold"
                     android:textSize="20sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black_5"
                     android:text="Have you tried to lose weight?" />
 
                 <LinearLayout
@@ -131,8 +128,7 @@
                             android:textSize="16sp"
                             android:textStyle="bold"
                             android:checked="false"
-                            android:buttonTint="@color/white"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black_5"
                             android:text="Yes"/>
 
 
@@ -141,10 +137,9 @@
                             android:layout_height="wrap_content"
                             android:id="@+id/radio_five"
                             android:textSize="16sp"
-                            android:buttonTint="@color/white"
                             android:textStyle="bold"
                             android:checked="false"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black_5"
                             android:text="No"/>
 
                     </RadioGroup>
@@ -162,7 +157,7 @@
                     android:padding="8dp"
                     android:textStyle="bold"
                     android:textSize="20sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black_5"
                     android:text="Have you tried to diet?" />
 
                 <LinearLayout
@@ -185,8 +180,7 @@
                             android:textStyle="bold"
                             android:id="@+id/radio_six"
                             android:checked="false"
-                            android:buttonTint="@color/white"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black_5"
                             android:text="Yes"/>
 
 
@@ -197,8 +191,7 @@
                             android:id="@+id/radio_seven"
                             android:checked="false"
                             android:textStyle="bold"
-                            android:buttonTint="@color/white"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black_5"
                             android:text="No"/>
 
                     </RadioGroup>
@@ -217,7 +210,7 @@
                     android:padding="8dp"
                     android:textStyle="bold"
                     android:textSize="20sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black_5"
                     android:text="Have you tried to change Lifestyle?" />
 
 
@@ -241,19 +234,17 @@
                             android:id="@+id/radio_eight"
                             android:textStyle="bold"
                             android:checked="false"
-                            android:buttonTint="@color/white"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black_5"
                             android:text="Yes"/>
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="16sp"
-                            android:buttonTint="@color/white"
                             android:textStyle="bold"
                             android:id="@+id/radio_nine"
                             android:checked="false"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black_5"
                             android:text="No"/>
 
                     </RadioGroup>
@@ -272,7 +263,7 @@
                     android:padding="15dp"
                     android:textStyle="bold"
                     android:textSize="20sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black_5"
                     android:text="Have you got any results in losing weight?" />
 
                 <LinearLayout
@@ -295,8 +286,7 @@
                             android:id="@+id/radio_ten"
                             android:textStyle="bold"
                             android:checked="false"
-                            android:buttonTint="@color/white"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black_5"
                             android:text="Yes"/>
 
 
@@ -305,21 +295,19 @@
                             android:layout_height="wrap_content"
                             android:textSize="16sp"
                             android:id="@+id/radio_eleven"
-                            android:buttonTint="@color/white"
                             android:textStyle="bold"
                             android:checked="false"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black_5"
                             android:text="No"/>
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="16sp"
-                            android:buttonTint="@color/white"
                             android:textStyle="bold"
                             android:checked="false"
                             android:id="@+id/radio_twelve"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black_5"
                             android:text="Never Tried"/>
 
                     </RadioGroup>
@@ -401,7 +389,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="@dimen/spacing_large"
         android:layout_marginBottom="15dp"
-        android:background="@drawable/btn_rect_primary_eight"
+        android:background="@drawable/btn_rect_primary"
         android:text="NEXT"
         android:textAllCaps="false"
         android:layout_alignParentBottom="true"

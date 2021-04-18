@@ -3,10 +3,6 @@ package com.jaylax.pcospcod.fragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import androidx.core.widget.NestedScrollView;
-import androidx.fragment.app.Fragment;
-
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,8 +11,11 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.jaylax.pcospcod.patientactivities.PatientDashboardActivity;
 import com.jaylax.pcospcod.R;
+import com.jaylax.pcospcod.patientactivities.PatientDashboardActivity;
+
+import androidx.core.widget.NestedScrollView;
+import androidx.fragment.app.Fragment;
 
 public class InquiryFragment extends Fragment {
 
@@ -42,7 +41,7 @@ public class InquiryFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_inquiry, container, false);
 
-        ((PatientDashboardActivity)getActivity()).setToolbarTitle("Cosult a Doctor");
+        ((PatientDashboardActivity)getActivity()).setToolbarTitle("Consult a Doctor");
 
 //        ((PatientDashboardActivity)getActivity()).setToolbarTitle("Cosult a Doctor");
 

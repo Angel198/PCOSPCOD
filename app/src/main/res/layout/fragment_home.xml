@@ -25,7 +25,7 @@
 
             <TextView
                 android:id = "@+id/mark"
-                android:textSize = "16dp"
+                android:textSize = "15sp"
                 android:padding="8dp"
                 android:layout_width = "match_parent"
                 android:layout_height = "wrap_content"
@@ -272,6 +272,7 @@
                     android:layout_gravity="center"
                     android:padding="12dp"
                     android:textSize="15sp"
+                    android:lineSpacingExtra="5dp"
                     android:layout_marginTop="12dp"
                     android:justificationMode="inter_word"
                     android:textStyle="bold"
@@ -281,58 +282,233 @@
 
             </LinearLayout>
 
-
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp"
-                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="@dimen/spacing_large"
                 android:orientation="horizontal">
-                
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:cardCornerRadius="2dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_gravity="center"
                         app:cardElevation="2dp"
                         app:cardUseCompatPadding="true">
 
+
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/view_one"
-                            android:padding="5dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="130dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="130dp"
                                 android:background="@drawable/home_one"/>
-
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
+                                android:textStyle="bold"
+                                android:lineSpacingExtra="2dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
                                 android:textColor="@color/black_5"
-                                android:text="irregular periods in PCOS"/>
+                                android:text="Irregular periods in PCOS"/>
 
 
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
 
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginBottom="@dimen/spacing_medium"-->
+<!--                        android:text="@string/first_name"-->
+<!--                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+<!--                        android:textColor="@color/grey_60" />-->
+
+
                 </LinearLayout>
 
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+                        android:layout_gravity="center"
+                        app:cardUseCompatPadding="true">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:background="@drawable/home_one"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:textStyle="bold"
+                                android:lineSpacingExtra="2dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/black_5"
+                                android:text="Irregular periods in PCOS"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--                    <TextView-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginBottom="@dimen/spacing_medium"-->
+                    <!--                        android:text="@string/first_name"-->
+                    <!--                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+                    <!--                        android:textColor="@color/grey_60" />-->
+
+
+                </LinearLayout>
+
+
             </LinearLayout>
+
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_marginRight="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                -->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        app:cardCornerRadius="8dp"-->
+<!--                        app:cardElevation="2dp"-->
+<!--                        app:cardUseCompatPadding="true">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="150dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:id="@+id/view_one"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="vertical">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="150dp"-->
+<!--                                android:layout_height="130dp"-->
+<!--                                android:background="@drawable/home_one"/>-->
+
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:padding="5dp"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:lineSpacingExtra="2dp"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:gravity="center"-->
+<!--                                android:textColor="@color/black_5"-->
+<!--                                android:text="Irregular periods in PCOS"/>-->
+
+
+<!--                        </LinearLayout>-->
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        app:cardCornerRadius="8dp"-->
+<!--                        app:cardElevation="2dp"-->
+<!--                        app:cardUseCompatPadding="true">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="150dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:id="@+id/view_two"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="vertical">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="150dp"-->
+<!--                                android:layout_height="130dp"-->
+<!--                                android:background="@drawable/home_one"/>-->
+
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:padding="5dp"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:lineSpacingExtra="2dp"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:gravity="center"-->
+<!--                                android:textColor="@color/black_5"-->
+<!--                                android:text="Irregular periods in PCOS"/>-->
+
+
+<!--                        </LinearLayout>-->
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
 
         </LinearLayout>
 

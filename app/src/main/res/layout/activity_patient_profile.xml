@@ -64,11 +64,11 @@
                     android:padding="10dp"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Name"
-                        android:textSize="17sp"/>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Name"-->
+<!--                        android:textSize="17sp"/>-->
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -76,11 +76,11 @@
                         android:text="Mansi Patel"
                         android:id="@+id/p_name"
                         android:gravity="end"
+                        android:layout_marginTop="10dp"
                         android:textStyle="bold"
                         android:textColor="@color/grey_80"
                         android:layout_gravity="end"
                         android:textSize="17sp"/>
-
 
                 </LinearLayout>
 
@@ -90,28 +90,35 @@
                     android:layout_gravity="end"
                     android:gravity="end">
 
-                    <FrameLayout
+                    <RelativeLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center">
+                        android:layout_height="wrap_content">
 
                         <com.mikhaellopez.circularimageview.CircularImageView
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            app:civ_border="true"
                             android:id="@+id/profilePic"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="bottom|center_horizontal"
-                            android:src="@drawable/patientimage" />
+                            app:civ_border_color="@color/grey_40"
+                            app:civ_border_width="1dp"
+                            app:civ_shadow="true"
+                            app:civ_shadow_radius="0" />
 
-<!--                        <ImageView-->
-<!--                            android:id="@+id/iv_camera"-->
-<!--                            android:layout_width="24dp"-->
-<!--                            android:layout_height="24dp"-->
-<!--                            android:layout_marginTop="8dp"-->
-<!--                            app:srcCompat="@drawable/baseline_edit_24"-->
-<!--                            android:layout_gravity="top|right" />-->
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="14dp"
+                            android:text="Add \n Photo"
+                            android:id="@+id/remove"
+                            android:gravity="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:background="@drawable/circle_accent"
+                            android:textStyle="bold" />
 
-
-                    </FrameLayout>
+                    </RelativeLayout>
 
                 </LinearLayout>
 
@@ -145,7 +152,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/grey_80"
                     android:layout_gravity="end"
-                    android:textSize="17sp"/>
+                    android:textSize="16sp"/>
 
 
             </LinearLayout>
@@ -176,7 +183,7 @@
                     android:gravity="end"
                     android:text=""
                     android:textColor="@color/grey_80"
-                    android:textSize="17sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -187,7 +194,6 @@
                 android:layout_height="2dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/grey_10"/>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -204,13 +210,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text=""
+                    android:text="Female"
                     android:id="@+id/p_gender"
                     android:gravity="end"
                     android:textStyle="bold"
                     android:textColor="@color/grey_80"
                     android:layout_gravity="end"
-                    android:textSize="17sp"/>
+                    android:textSize="16sp"/>
 
 
 
@@ -245,7 +251,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/grey_80"
                     android:layout_gravity="end"
-                    android:textSize="17sp"/>
+                    android:textSize="16sp"/>
 
 
             </LinearLayout>
@@ -278,7 +284,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/grey_80"
                     android:layout_gravity="end"
-                    android:textSize="17sp"/>
+                    android:textSize="16sp"/>
 
             </LinearLayout>
 
@@ -311,7 +317,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/grey_80"
                     android:layout_gravity="end"
-                    android:textSize="17sp"/>
+                    android:textSize="16sp"/>
 
 
             </LinearLayout>
@@ -345,7 +351,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/grey_80"
                     android:layout_gravity="end"
-                    android:textSize="17sp"/>
+                    android:textSize="16sp"/>
 
 
             </LinearLayout>
@@ -378,7 +384,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/grey_80"
                     android:layout_gravity="end"
-                    android:textSize="17sp"/>
+                    android:textSize="16sp"/>
 
 
             </LinearLayout>

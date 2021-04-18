@@ -65,8 +65,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/grey_60"
-                        android:padding="5dp"
-                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:lineSpacingExtra="5dp"
+                        android:textStyle="bold"
                         android:text="You may have tried to treat PCOS or PCOD with different kind of medicines, like Metformin, Contraceptive pills, 21 days medicines, Ayurvedic or Homeopathy medicines and you may have seen that till you took such medicines and till the effect of medicines, you use to get menstrual cycle regular for till you will consume medicines. As soon you leave medicines,  you get back the same problem again. It happens due to medicines, which you consumed it was not for balancing hormones.  We are requesting you to stop such medicines, which will disturb your hormones more and your symptoms will gradually increase."
                         android:justificationMode="inter_word"/>
 
@@ -76,10 +78,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_large"
                         android:justificationMode="inter_word"
-                        android:padding="5dp"
+                        android:padding="8dp"
+                        android:lineSpacingExtra="5dp"
+                        android:textStyle="bold"
                         android:text="You are at the right place to get all information with our experts and we never give you any kind of medicines and we all will guide you."
                         android:textColor="@color/grey_60"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 

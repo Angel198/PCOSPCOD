@@ -51,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/grey_60"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 android:text="Do you want to know you have PCOD or PCOD?" />
 
@@ -60,7 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/grey_60"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:text="Enter Value" />
@@ -76,7 +76,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/grey_60"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:text="LH" />
 
@@ -85,7 +85,7 @@
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:textColor="@color/grey_60"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     android:layout_marginTop="5dp"
                     style="@style/EditText.White"
                     android:id="@+id/value_LH"
@@ -107,7 +107,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/grey_60"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:text="FSH" />
 
@@ -116,7 +116,7 @@
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:textColor="@color/grey_60"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     android:id="@+id/value_FSH"
                     android:layout_marginTop="5dp"
                     style="@style/EditText.White"
@@ -147,7 +147,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/grey_60"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:text="Do you have AMH (Anti Mullerian Hormones) Report?" />
@@ -162,7 +162,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/grey_60"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:text="LH" />
 
@@ -171,7 +171,7 @@
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:textColor="@color/grey_60"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     android:layout_marginTop="5dp"
                     style="@style/EditText.White"
                     android:id="@+id/value_AMH"
@@ -187,9 +187,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/grey_60"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 android:padding="5dp"
                 android:layout_marginTop="15dp"
+                android:lineSpacingExtra="5dp"
                 android:textStyle="bold"
                 android:text="If you have taken any kind of medicines in last 2 years like Allopathic, Ayurvedic or Homeopathy" />
 
@@ -204,7 +205,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/yes_AMH"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:checked="false"
                     android:textColor="@color/grey_60"
@@ -215,7 +216,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/no_AMH"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:checked="false"
                     android:textColor="@color/grey_60"
@@ -246,7 +247,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/grey_60"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:layout_marginTop="15dp"
                     android:textStyle="bold"
                     android:text="Having PCOS or PCOD"/>
@@ -255,9 +256,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/grey_60"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     android:layout_marginTop="15dp"
                     android:textStyle="bold"
+                    android:lineSpacingExtra="5dp"
                     android:justificationMode="inter_word"
                     android:text="If you have high AMH means your Hormones are imbalance, having more eggs and due to unhealthy eggs, if you are married unable to conceive. You AMH level should be less than 6.79 ng/ml and your hormones are imbalanced."/>
 
@@ -266,7 +268,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/grey_60"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="5dp"
                     android:justificationMode="inter_word"
                     android:layout_marginTop="15dp"
                     android:textStyle="bold"

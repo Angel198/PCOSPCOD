@@ -14,8 +14,8 @@
         android:orientation="vertical">
 
         <com.mikhaellopez.circularimageview.CircularImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:src="@drawable/image_one"
             app:civ_border="true"
             app:civ_border_color="@color/grey_10"
@@ -27,9 +27,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginTop="7dp"
             android:text="Dr Rajesh Soni"
             android:id="@+id/d_name"
+            android:textSize="15sp"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
             android:textColor="@color/grey_90"
             app:fontFamily="sans-serif-medium" />
@@ -38,6 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Founder"
+            android:textSize="15sp"
             android:id="@+id/d_specialization"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
             android:textColor="@color/grey_60"

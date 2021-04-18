@@ -8,10 +8,8 @@ import android.location.Location;
 import android.os.Bundle;
 import android.os.ResultReceiver;
 import android.util.Log;
-
 import java.util.List;
 import java.util.Locale;
-
 import androidx.annotation.Nullable;
 
 

@@ -1,7 +1,5 @@
 package com.jaylax.pcospcod;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +11,8 @@ import android.util.Log;
 
 import com.jaylax.pcospcod.doctoractivities.DoctorDashboardActivity;
 import com.jaylax.pcospcod.patientactivities.PatientDashboardActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 

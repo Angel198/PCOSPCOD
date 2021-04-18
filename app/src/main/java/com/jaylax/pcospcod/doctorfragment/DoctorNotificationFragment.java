@@ -54,6 +54,9 @@ public class DoctorNotificationFragment extends Fragment {
         user_id = sharedPreferences.getString("userid",null);
         name = sharedPreferences.getString("nn",null);
 
+
+        getdata();
+
         return view;
 
 
@@ -142,8 +145,8 @@ public class DoctorNotificationFragment extends Fragment {
         UserLogin ul = new UserLogin();
         ul.execute();
 
-
     }
+
     public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
 
         private List<NotificationModel> mListenerList;
@@ -168,8 +171,6 @@ public class DoctorNotificationFragment extends Fragment {
 //                number = (TextView) view.findViewById(R.id.patient_number);
 //                circularImageView = (CircularImageView) view.findViewById(R.id.profilePic);
 //                layout_re = (LinearLayout) view.findViewById(R.id.layout_re);
-
-
             }
 
         }
@@ -191,8 +192,6 @@ public class DoctorNotificationFragment extends Fragment {
 
 //            byte[] decodestring = Base64.decode(mListenerList.get(position).getImage(),Base64.DEFAULT);
 //            Bitmap decodeByte = BitmapFactory.decodeByteArray(decodestring,0,decodestring.length);
-
-
 
         }
 

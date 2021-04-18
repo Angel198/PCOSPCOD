@@ -66,8 +66,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/grey_60"
-                        android:padding="5dp"
-                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"
                         android:text="All over the world, there are no medicines in Allopathic, Ayurvedic, or Homeopathy to balance hormones. Many of you have tried different kinds of medicines, you may have changed a number of Doctors and dietitians. Unfortunately, you have never got results. You have lost time and money and increased stress."
                         android:justificationMode="inter_word"/>
 
@@ -77,10 +79,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_large"
                         android:justificationMode="inter_word"
-                        android:padding="5dp"
+                        android:padding="8dp"
+                        android:lineSpacingExtra="5dp"
+                        android:textStyle="bold"
                         android:text="Losing weight can not be balance hormones and when hormones are imbalanced it is not easy to lose weight. Which every Doctor and Dietitian knows."
                         android:textColor="@color/grey_60"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 

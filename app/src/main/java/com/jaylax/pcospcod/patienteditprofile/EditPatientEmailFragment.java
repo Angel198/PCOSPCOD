@@ -6,9 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,14 +17,13 @@ import android.widget.TextView;
 
 import com.jaylax.pcospcod.LoginActivity;
 import com.jaylax.pcospcod.R;
-import com.jaylax.pcospcod.patientactivities.PatientProfileActivity;
 import com.jaylax.pcospcod.util.RequestHandler;
 
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
+
+import androidx.fragment.app.Fragment;
 
 
 public class EditPatientEmailFragment extends Fragment {
@@ -38,7 +35,6 @@ public class EditPatientEmailFragment extends Fragment {
     SharedPreferences.Editor editor;
     String user_id, name, token;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -49,7 +45,7 @@ public class EditPatientEmailFragment extends Fragment {
 
         sharedPreferences = getContext().getSharedPreferences(LoginActivity.MyPREFERENCES, Context.MODE_PRIVATE);
         user_id = sharedPreferences.getString("userid",null);
-        mail = sharedPreferences.getString("edit_email",null);
+        mail = sharedPreferences.getString("ps_email",null);
 
         email.setText(mail);
 
@@ -87,8 +83,22 @@ public class EditPatientEmailFragment extends Fragment {
 
                             if (rs.equals("true"))
                             {
-                                getFragmentManager().popBackStack();
-                                ((PatientProfileActivity)getActivity()).setvisibility();
+                                new Handler().post(new Runnable() {
+
+                                    @Override
+                                    public void run()
+                                    {
+                                        Intent intent = getActivity().getIntent();
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK
+                                                | Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                                        getActivity().overridePendingTransition(0, 0);
+                                        getActivity().finish();
+
+                                        startActivity(intent);
+                                    }
+                                });
+//                                getFragmentManager().popBackStack();
+//                                ((PatientProfileActivity)getActivity()).setvisibility();
 
                             }
 

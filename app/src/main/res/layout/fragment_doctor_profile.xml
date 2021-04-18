@@ -25,66 +25,6 @@
             android:layout_marginBottom="15dp"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/specialization"
-                style="@style/EditText.Flat.Grey"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:background="@drawable/edit_text_round_bg_white"
-                android:inputType="text"
-                android:minHeight="@dimen/spacing_xmlarge"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle"
-                android:text="" />
-
-            <EditText
-                android:id="@+id/contact"
-                style="@style/EditText.Flat.Grey"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:background="@drawable/edit_text_round_bg_white"
-                android:inputType="number"
-                android:maxLength="10"
-                android:minHeight="@dimen/spacing_xmlarge"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle"
-                android:text="" />
-
-            <EditText
-                android:id="@+id/email"
-                style="@style/EditText.Flat.Grey"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:background="@drawable/edit_text_round_bg_white"
-                android:inputType="textEmailAddress"
-                android:minHeight="@dimen/spacing_xmlarge"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle"
-                android:text="" />
-
-            <EditText
-                android:id="@+id/clinic_name"
-                style="@style/EditText.Flat.Grey"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:background="@drawable/edit_text_round_bg_white"
-                android:inputType="text"
-                android:minHeight="@dimen/spacing_xmlarge"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle"
-                android:text="" />
-
-            <EditText
-                android:id="@+id/about_yourself"
-                style="@style/EditText.Flat.Grey"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:background="@drawable/edit_text_round_bg_white"
-                android:inputType="textMultiLine"
-                android:minHeight="@dimen/spacing_xmlarge"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle"
-                android:text="" />
 
             <FrameLayout
                 android:layout_width="150dp"
@@ -125,6 +65,14 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_medium"
+                        android:text="@string/first_name"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/grey_60" />
+
                     <EditText
                         android:id="@+id/fname"
                         style="@style/EditText.Flat.Grey"
@@ -138,21 +86,26 @@
                         android:paddingRight="@dimen/spacing_middle"
                         android:text="" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/spacing_medium"
-                        android:text="@string/first_name"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textColor="@color/grey_60" />
 
                 </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/spacing_large"
+                    android:layout_height="0dp" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_medium"
+                        android:text="@string/last_name"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/grey_60" />
 
                     <EditText
                         android:id="@+id/lname"
@@ -166,22 +119,124 @@
                         android:paddingRight="@dimen/spacing_middle"
                         android:text="" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/spacing_medium"
-                        android:text="@string/last_name"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textColor="@color/grey_60" />
 
                 </LinearLayout>
 
-                <View
-                    android:layout_width="@dimen/spacing_large"
-                    android:layout_height="0dp" />
 
 
             </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="Specialization"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/grey_60" />
+
+
+            <EditText
+                android:id="@+id/specialization"
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:background="@drawable/edit_text_round_bg_white"
+                android:inputType="text"
+                android:minHeight="@dimen/spacing_xmlarge"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="Contact"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/grey_60" />
+
+
+            <EditText
+                android:id="@+id/contact"
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:background="@drawable/edit_text_round_bg_white"
+                android:inputType="number"
+                android:maxLength="10"
+                android:minHeight="@dimen/spacing_xmlarge"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="Email"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/grey_60" />
+
+
+            <EditText
+                android:id="@+id/email"
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:background="@drawable/edit_text_round_bg_white"
+                android:inputType="textEmailAddress"
+                android:minHeight="@dimen/spacing_xmlarge"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="Clinic Name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/grey_60" />
+
+
+            <EditText
+                android:id="@+id/clinic_name"
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:background="@drawable/edit_text_round_bg_white"
+                android:inputType="text"
+                android:minHeight="@dimen/spacing_xmlarge"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle"
+                android:text="" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="About Yourself"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/grey_60" />
+
+            <EditText
+                android:id="@+id/about_yourself"
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:background="@drawable/edit_text_round_bg_white"
+                android:inputType="textMultiLine"
+                android:minHeight="@dimen/spacing_xmlarge"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle"
+                android:text="" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -194,6 +249,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_medium"
+                        android:text="Country"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/grey_60" />
+
 
                     <EditText
                         android:id="@+id/country"
@@ -208,20 +272,25 @@
                         android:paddingRight="@dimen/spacing_middle"
                         android:text="" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/spacing_medium"
-                        android:text="Country"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textColor="@color/grey_60" />
 
                 </LinearLayout>
+                <View
+                    android:layout_width="@dimen/spacing_large"
+                    android:layout_height="0dp" />
 
                 <LinearLayout
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_medium"
+                        android:text="@string/pincode"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/grey_60" />
+
 
                     <EditText
                         android:id="@+id/pincode"
@@ -235,19 +304,9 @@
                         android:paddingRight="@dimen/spacing_middle"
                         android:text="" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/spacing_medium"
-                        android:text="@string/pincode"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textColor="@color/grey_60" />
 
                 </LinearLayout>
 
-                <View
-                    android:layout_width="@dimen/spacing_large"
-                    android:layout_height="0dp" />
 
 
                 <!--<LinearLayout-->
@@ -293,6 +352,14 @@
                     android:layout_weight="2"
                     android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_medium"
+                        android:text="@string/street"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/grey_60" />
+
                     <EditText
                         android:id="@+id/address"
                         style="@style/EditText.Flat.Grey"
@@ -306,17 +373,20 @@
                         android:paddingRight="@dimen/spacing_middle"
                         android:text="" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/spacing_medium"
-                        android:text="@string/street"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textColor="@color/grey_60" />
 
                 </LinearLayout>
 
             </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="Gender"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/grey_60" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -423,59 +493,11 @@
             <!--            </LinearLayout>-->
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_large"
-                android:layout_marginBottom="@dimen/spacing_medium"
-                android:text="Specialization"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/grey_60" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_large"
-                android:layout_marginBottom="@dimen/spacing_medium"
-                android:text="Contact"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/grey_60" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_large"
-                android:layout_marginBottom="@dimen/spacing_medium"
-                android:text="Email"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/grey_60" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_large"
-                android:layout_marginBottom="@dimen/spacing_medium"
-                android:text="Clinic Name"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/grey_60" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_large"
-                android:layout_marginBottom="@dimen/spacing_medium"
-                android:text="About Yourself"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/grey_60" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_large"
-                android:layout_marginBottom="@dimen/spacing_medium"
-                android:text="Gender"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/grey_60" />
 
             <TextView
                 android:id="@+id/bt_submit"

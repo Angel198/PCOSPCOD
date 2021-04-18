@@ -25,7 +25,6 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.github.barteksc.pdfviewer.PDFView;
 import com.jaylax.pcospcod.LoginActivity;
 import com.jaylax.pcospcod.R;
@@ -33,17 +32,14 @@ import com.jaylax.pcospcod.util.ReportModel;
 import com.jaylax.pcospcod.util.RequestHandler;
 import com.jaylax.pcospcod.util.Uploadd;
 import com.jaylax.pcospcod.util.UriUtils;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -71,6 +67,7 @@ public class ReportActivity extends AppCompatActivity {
     String path;
     Integer pageNumber = 0;
     String pdfFileName;
+    TextView f_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +76,7 @@ public class ReportActivity extends AppCompatActivity {
 
         upload_file = (TextView) findViewById(R.id.upload_file);
         upload = (TextView) findViewById(R.id.upload_filee);
+        f_name = (TextView) findViewById(R.id.upload_file_name);
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         linearlayout = (LinearLayout) findViewById(R.id.layout);
 
@@ -90,7 +88,6 @@ public class ReportActivity extends AppCompatActivity {
         editor = sharedPreferences.edit();
 
         Log.i("user_id",user_id);
-
 
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(manager);
@@ -120,7 +117,6 @@ public class ReportActivity extends AppCompatActivity {
 
         getpatientreport();
 
-
     }
 
 
@@ -134,9 +130,11 @@ public class ReportActivity extends AppCompatActivity {
             Uri uri = data.getData();
             FileName = getFileName(data.getData());
             Log.i("FileName",FileName);
-//
+
             PathHolder = UriUtils.getPathFromUri(this,uri);
             Log.d("Picture Path", PathHolder);
+
+            f_name.setText(PathHolder);
 
             try {
                 InputStream inputStream = ReportActivity.this.getContentResolver().openInputStream(uri);
@@ -207,19 +205,24 @@ public class ReportActivity extends AppCompatActivity {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
+                uploading =  new ProgressDialog(ReportActivity.this);
+                uploading.setMessage("Uploading.....");
+                uploading.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                uploading.setCancelable(true);
+                uploading.show();
             }
 
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 Log.i("sss",s);
-//
+                uploading.cancel();
                 if (s.equals("200"))
                 {
                     getdata();
                 }
                 else {
-                    Toast.makeText(ReportActivity.this, "Please Upload Your recipe again", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ReportActivity.this, "Please Upload Your report again", Toast.LENGTH_SHORT).show();
                 }
             }
 

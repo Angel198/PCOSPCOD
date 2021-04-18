@@ -25,7 +25,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:background="@color/purple_500"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="#014446"
                 android:orientation="vertical">
 
                 <TextView
@@ -34,9 +36,8 @@
                     android:id="@+id/user_height"
                     android:padding="15dp"
                     android:textStyle="bold"
-                    android:layout_marginTop="100dp"
+                    android:gravity="center"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
                     android:textSize="25sp"
                     android:fontFamily="@font/poppins_medium"
                     android:textColor="@color/white"
@@ -92,7 +93,7 @@
     </androidx.core.widget.NestedScrollView>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:hint="0000"
         android:padding="8dp"
         android:layout_marginBottom="25dp"
@@ -105,8 +106,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:textAlignment="center"
-        android:textColor="@color/purple_200"
-        android:background="@drawable/add_border_otp"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_rect_primary"
         android:gravity="center" />
 
 </RelativeLayout>

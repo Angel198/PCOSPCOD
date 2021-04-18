@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -186,6 +187,18 @@ public class SelectTimeFragment extends Fragment {
                                 dialog.setCancelable(true);
 
                                 ImageView icon = dialog.findViewById(R.id.icon_only);
+                                Handler handler=new Handler();
+
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        dialog.dismiss();
+
+                                        Intent intent = new Intent(getContext(), PatientDashboardActivity.class);
+                                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                        startActivity(intent);
+                                    }
+                                },5000);
 
                                 icon.setOnClickListener(new View.OnClickListener() {
                                     @Override

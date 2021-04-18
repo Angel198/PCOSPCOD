@@ -32,7 +32,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:background="@color/purple_500"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="#014446"
                 android:orientation="vertical">
 
                 <TextView
@@ -41,9 +43,8 @@
                     android:id="@+id/user_height"
                     android:padding="15dp"
                     android:textStyle="bold"
-                    android:layout_marginTop="100dp"
+                    android:gravity="center"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
                     android:textSize="22sp"
                     android:fontFamily="@font/poppins_medium"
                     android:textColor="@color/white"
@@ -67,12 +68,13 @@
                     app:np_dividerType="side_lines"
                     app:np_max="100"
                     app:np_min="0"
+                    app:np_textSize="16sp"
                     app:np_orientation="horizontal"
                     app:np_fadingEdgeEnabled="false"
                     app:np_order="ascending"
                     app:np_wrapSelectorWheel="true"
                     app:np_selectedTextColor="@color/purple_500"
-                    app:np_textColor="@color/grey_40"
+                    app:np_textColor="@color/black_5"
                     app:np_dividerColor="@color/teal_300"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true" />
