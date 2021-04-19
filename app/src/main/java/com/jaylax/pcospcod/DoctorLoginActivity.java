@@ -153,17 +153,14 @@ public class DoctorLoginActivity extends AppCompatActivity {
                             Log.i("r_name",nn);
 
 //                            databaseReference = FirebaseDatabase.getInstance().getReference().child(newToken);
-//
 //                            databaseReference.addValueEventListener(new ValueEventListener() {
 //                                @Override
 //                                public void onDataChange(@NonNull DataSnapshot snapshot)
 //                                {
-//
-//                                    databaseReference.child("user_id").setValue(user_id);
+//                                      databaseReference.child("user_id").setValue(user_id);
 ////                                    databaseReference.child("device_token").setValue(androidId);
 ////                                    databaseReference.child("user_type").setValue("1");
 //                                }
-//
 //                                @Override
 //                                public void onCancelled(@NonNull DatabaseError error) {
 //
